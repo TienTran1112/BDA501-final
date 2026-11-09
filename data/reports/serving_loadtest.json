@@ -1,0 +1,213 @@
+{
+  "settings": {
+    "fraction": 1.0,
+    "warmup_s": 10,
+    "measure_s": 45,
+    "key_count": 20000
+  },
+  "Q1": [
+    {
+      "clients": 1,
+      "requests": 1707,
+      "throughput_per_s": 37.9,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 4.23,
+      "first_error": null,
+      "p50_ms": 22.84,
+      "p95_ms": 52.88,
+      "p99_ms": 81.79
+    },
+    {
+      "clients": 4,
+      "requests": 2981,
+      "throughput_per_s": 66.2,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 4.09,
+      "first_error": null,
+      "p50_ms": 48.05,
+      "p95_ms": 134.69,
+      "p99_ms": 220.06
+    },
+    {
+      "clients": 16,
+      "requests": 5898,
+      "throughput_per_s": 131.1,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 4.12,
+      "first_error": null,
+      "p50_ms": 95.73,
+      "p95_ms": 297.55,
+      "p99_ms": 475.48
+    }
+  ],
+  "Q2": [
+    {
+      "clients": 1,
+      "requests": 8327,
+      "throughput_per_s": 185.0,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.15,
+      "first_error": null,
+      "p50_ms": 4.82,
+      "p95_ms": 8.72,
+      "p99_ms": 13.9
+    },
+    {
+      "clients": 4,
+      "requests": 20716,
+      "throughput_per_s": 460.4,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.15,
+      "first_error": null,
+      "p50_ms": 7.14,
+      "p95_ms": 13.19,
+      "p99_ms": 24.56
+    },
+    {
+      "clients": 16,
+      "requests": 35142,
+      "throughput_per_s": 780.9,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.16,
+      "first_error": null,
+      "p50_ms": 16.65,
+      "p95_ms": 39.46,
+      "p99_ms": 78.1
+    }
+  ],
+  "Q3": [
+    {
+      "clients": 1,
+      "requests": 83495,
+      "throughput_per_s": 1855.4,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 1.0,
+      "first_error": null,
+      "p50_ms": 0.39,
+      "p95_ms": 1.25,
+      "p99_ms": 1.91
+    },
+    {
+      "clients": 4,
+      "requests": 146496,
+      "throughput_per_s": 3255.5,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 1.0,
+      "first_error": null,
+      "p50_ms": 1.13,
+      "p95_ms": 1.85,
+      "p99_ms": 2.53
+    },
+    {
+      "clients": 16,
+      "requests": 190554,
+      "throughput_per_s": 4234.5,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 1.0,
+      "first_error": null,
+      "p50_ms": 2.43,
+      "p95_ms": 10.94,
+      "p99_ms": 18.72
+    }
+  ],
+  "Q4": [
+    {
+      "clients": 1,
+      "requests": 30051,
+      "throughput_per_s": 667.8,
+      "errors": 0,
+      "empty": 10709,
+      "empty_share": 0.3564,
+      "rows_per_request": 1.14,
+      "first_error": null,
+      "p50_ms": 1.44,
+      "p95_ms": 2.75,
+      "p99_ms": 3.71
+    },
+    {
+      "clients": 4,
+      "requests": 64766,
+      "throughput_per_s": 1439.2,
+      "errors": 0,
+      "empty": 22977,
+      "empty_share": 0.3548,
+      "rows_per_request": 1.14,
+      "first_error": null,
+      "p50_ms": 2.67,
+      "p95_ms": 4.65,
+      "p99_ms": 5.71
+    },
+    {
+      "clients": 16,
+      "requests": 108772,
+      "throughput_per_s": 2417.2,
+      "errors": 0,
+      "empty": 38579,
+      "empty_share": 0.3547,
+      "rows_per_request": 1.14,
+      "first_error": null,
+      "p50_ms": 5.59,
+      "p95_ms": 14.72,
+      "p99_ms": 21.44
+    }
+  ],
+  "Q5": [
+    {
+      "clients": 1,
+      "requests": 63366,
+      "throughput_per_s": 1408.1,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 29.55,
+      "first_error": null,
+      "p50_ms": 0.57,
+      "p95_ms": 1.44,
+      "p99_ms": 1.99
+    },
+    {
+      "clients": 4,
+      "requests": 95957,
+      "throughput_per_s": 2132.4,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 29.54,
+      "first_error": null,
+      "p50_ms": 1.77,
+      "p95_ms": 2.72,
+      "p99_ms": 3.59
+    },
+    {
+      "clients": 16,
+      "requests": 174073,
+      "throughput_per_s": 3868.3,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 29.54,
+      "first_error": null,
+      "p50_ms": 3.29,
+      "p95_ms": 9.0,
+      "p99_ms": 14.22
+    }
+  ]
+}

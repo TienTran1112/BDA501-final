@@ -1,0 +1,1917 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/08 15:39:02 INFO SparkContext: Running Spark version 4.2.0
+26/11/08 15:39:02 INFO SparkContext: OS info Linux, 6.18.54.1-microsoft-standard-WSL2, amd64
+26/11/08 15:39:02 INFO SparkContext: Java version 17.0.21+9-1-deb12u1-Debian
+26/11/08 15:39:03 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/08 15:39:03 INFO ResourceUtils: ==============================================================
+26/11/08 15:39:03 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/11/08 15:39:03 INFO ResourceUtils: ==============================================================
+26/11/08 15:39:03 INFO SparkContext: Submitted application: bda501-price-model
+26/11/08 15:39:03 INFO SecurityManager: Changing view acls to: root
+26/11/08 15:39:03 INFO SecurityManager: Changing modify acls to: root
+26/11/08 15:39:03 INFO SecurityManager: Changing view acls groups to: root
+26/11/08 15:39:03 INFO SecurityManager: Changing modify acls groups to: root
+26/11/08 15:39:03 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY; RPC SSL disabled
+26/11/08 15:39:03 INFO Utils: Successfully started service 'sparkDriver' on port 35299.
+26/11/08 15:39:03 INFO SparkEnv: Registering MapOutputTracker
+26/11/08 15:39:03 INFO SparkEnv: Registering BlockManagerMaster
+26/11/08 15:39:03 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/11/08 15:39:04 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/11/08 15:39:04 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/11/08 15:39:04 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-e03840c0-e447-4bba-a95c-9691d2934473
+26/11/08 15:39:04 INFO SparkEnv: Registering OutputCommitCoordinator
+26/11/08 15:39:04 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/11/08 15:39:04 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/11/08 15:39:04 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/11/08 15:39:04 INFO ResourceProfile: Limiting resource is cpu
+26/11/08 15:39:04 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/11/08 15:39:04 INFO SecurityManager: Changing view acls to: root
+26/11/08 15:39:04 INFO SecurityManager: Changing modify acls to: root
+26/11/08 15:39:04 INFO SecurityManager: Changing view acls groups to: root
+26/11/08 15:39:04 INFO SecurityManager: Changing modify acls groups to: root
+26/11/08 15:39:04 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY; RPC SSL disabled
+26/11/08 15:39:05 INFO Executor: Starting executor ID driver on host 37c605f3f9b0
+26/11/08 15:39:05 INFO Executor: Running Spark version 4.2.0
+26/11/08 15:39:05 INFO Executor: OS info Linux, 6.18.54.1-microsoft-standard-WSL2, amd64
+26/11/08 15:39:05 INFO Executor: Java version 17.0.21+9-1-deb12u1-Debian
+26/11/08 15:39:05 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/11/08 15:39:05 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@3a5558f6 for default.
+26/11/08 15:39:05 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40507.
+26/11/08 15:39:05 INFO NettyBlockTransferService: Server created on 37c605f3f9b0:40507
+26/11/08 15:39:05 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/11/08 15:39:05 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 37c605f3f9b0, 40507, None)
+26/11/08 15:39:05 INFO BlockManagerMasterEndpoint: Registering block manager 37c605f3f9b0:40507 with 2.8 GiB RAM, BlockManagerId(driver, 37c605f3f9b0, 40507, None)
+26/11/08 15:39:05 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 37c605f3f9b0, 40507, None)
+26/11/08 15:39:05 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 37c605f3f9b0, 40507, None)
+26/11/08 15:39:26 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+Tuning on 479563 train rows
+netlib-blas: JNI_OnLoad: dlopen(libblas.so.3) failed: libblas.so.3: cannot open shared object file: No such file or directory
+  depth 5: validation MAE $35.06 (57s)
+  depth 7: validation MAE $34.39 (69s)
+  depth 9: validation MAE $34.32 (95s)
+Chosen depth: 9
+26/11/08 15:45:44 WARN MemoryStore: Not enough space to cache rdd_4352_6 in memory! (computed 230.4 MiB so far)
+26/11/08 15:45:44 WARN BlockManager: Persisting block rdd_4352_6 to disk instead.
+26/11/08 15:45:45 WARN MemoryStore: Not enough space to cache rdd_4352_8 in memory! (computed 230.4 MiB so far)
+26/11/08 15:45:45 WARN BlockManager: Persisting block rdd_4352_8 to disk instead.
+26/11/08 15:45:45 WARN MemoryStore: Not enough space to cache rdd_4352_11 in memory! (computed 230.4 MiB so far)
+26/11/08 15:45:45 WARN BlockManager: Persisting block rdd_4352_11 to disk instead.
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4387_2 in memory! (computed 10.8 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_0 to disk instead.
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN MemoryStore: Not enough space to cache rdd_4384_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_1 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_11 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_4 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_3 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4387_2 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_7 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_9 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_6 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_5 to disk instead.
+26/11/08 15:46:07 WARN BlockManager: Persisting block rdd_4384_10 to disk instead.
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4384_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4418_5 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:46:27 WARN BlockManager: Persisting block rdd_4418_5 to disk instead.
+26/11/08 15:46:27 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4418_10 in memory.
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4384_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4418_10 in memory! (computed 504.0 B so far)
+26/11/08 15:46:27 WARN BlockManager: Persisting block rdd_4418_10 to disk instead.
+26/11/08 15:46:27 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4418_4 in memory.
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4418_4 in memory! (computed 504.0 B so far)
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4418_9 in memory! (computed 2.4 MiB so far)
+26/11/08 15:46:27 WARN BlockManager: Persisting block rdd_4418_4 to disk instead.
+26/11/08 15:46:27 WARN BlockManager: Persisting block rdd_4418_9 to disk instead.
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4384_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4418_0 in memory! (computed 2.4 MiB so far)
+26/11/08 15:46:27 WARN BlockManager: Persisting block rdd_4418_0 to disk instead.
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4384_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4384_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4384_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:27 WARN MemoryStore: Not enough space to cache rdd_4384_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:28 WARN MemoryStore: Not enough space to cache rdd_4384_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:28 WARN MemoryStore: Not enough space to cache rdd_4418_7 in memory! (computed 8.2 MiB so far)
+26/11/08 15:46:28 WARN BlockManager: Persisting block rdd_4418_7 to disk instead.
+26/11/08 15:46:28 WARN MemoryStore: Not enough space to cache rdd_4418_11 in memory! (computed 2.4 MiB so far)
+26/11/08 15:46:28 WARN BlockManager: Persisting block rdd_4418_11 to disk instead.
+26/11/08 15:46:28 WARN MemoryStore: Not enough space to cache rdd_4418_6 in memory! (computed 3.7 MiB so far)
+26/11/08 15:46:28 WARN BlockManager: Persisting block rdd_4418_6 to disk instead.
+26/11/08 15:46:28 WARN MemoryStore: Not enough space to cache rdd_4418_1 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:46:28 WARN BlockManager: Persisting block rdd_4418_1 to disk instead.
+26/11/08 15:46:28 WARN MemoryStore: Not enough space to cache rdd_4418_3 in memory! (computed 3.7 MiB so far)
+26/11/08 15:46:28 WARN MemoryStore: Not enough space to cache rdd_4421_2 in memory! (computed 6.2 MiB so far)
+26/11/08 15:46:28 WARN BlockManager: Persisting block rdd_4421_2 to disk instead.
+26/11/08 15:46:28 WARN BlockManager: Persisting block rdd_4418_3 to disk instead.
+26/11/08 15:46:28 WARN MemoryStore: Not enough space to cache rdd_4418_8 in memory! (computed 2.4 MiB so far)
+26/11/08 15:46:28 WARN BlockManager: Persisting block rdd_4418_8 to disk instead.
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4418_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4418_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4418_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4418_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4452_11 in memory! (computed 2.4 MiB so far)
+26/11/08 15:46:47 WARN BlockManager: Persisting block rdd_4452_11 to disk instead.
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4452_1 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:46:47 WARN BlockManager: Persisting block rdd_4452_1 to disk instead.
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4452_0 in memory! (computed 2.4 MiB so far)
+26/11/08 15:46:47 WARN BlockManager: Persisting block rdd_4452_0 to disk instead.
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4452_2 in memory! (computed 8.2 MiB so far)
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4452_9 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:46:47 WARN BlockManager: Persisting block rdd_4452_2 to disk instead.
+26/11/08 15:46:47 WARN BlockManager: Persisting block rdd_4452_9 to disk instead.
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4418_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4418_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:47 WARN MemoryStore: Not enough space to cache rdd_4418_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4418_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4418_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4452_4 in memory! (computed 3.7 MiB so far)
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4452_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:46:48 WARN BlockManager: Persisting block rdd_4452_4 to disk instead.
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4452_5 in memory! (computed 3.7 MiB so far)
+26/11/08 15:46:48 WARN BlockManager: Persisting block rdd_4452_8 to disk instead.
+26/11/08 15:46:48 WARN BlockManager: Persisting block rdd_4452_5 to disk instead.
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4418_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4452_6 in memory! (computed 5.5 MiB so far)
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4452_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:46:48 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4452_3 in memory.
+26/11/08 15:46:48 WARN BlockManager: Persisting block rdd_4452_6 to disk instead.
+26/11/08 15:46:48 WARN BlockManager: Persisting block rdd_4452_10 to disk instead.
+26/11/08 15:46:48 WARN MemoryStore: Not enough space to cache rdd_4452_3 in memory! (computed 504.0 B so far)
+26/11/08 15:46:48 WARN BlockManager: Persisting block rdd_4452_3 to disk instead.
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_2 to disk instead.
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_0 in memory! (computed 2.4 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_11 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_0 to disk instead.
+26/11/08 15:47:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4486_7 in memory.
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_5 to disk instead.
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4486_6 in memory.
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_11 to disk instead.
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_9 in memory! (computed 5.5 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4486_8 in memory.
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4452_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4486_4 in memory.
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_7 in memory! (computed 504.0 B so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_3 in memory! (computed 3.7 MiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_8 in memory! (computed 504.0 B so far)
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_9 to disk instead.
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_1 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_6 in memory! (computed 504.0 B so far)
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_8 to disk instead.
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_3 to disk instead.
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_7 to disk instead.
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:47:11 WARN MemoryStore: Not enough space to cache rdd_4486_4 in memory! (computed 504.0 B so far)
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_4 to disk instead.
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_6 to disk instead.
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_1 to disk instead.
+26/11/08 15:47:11 WARN BlockManager: Persisting block rdd_4486_10 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_2 in memory! (computed 5.5 MiB so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_2 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4520_10 in memory.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_10 in memory! (computed 504.0 B so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_10 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_7 in memory! (computed 19.5 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4520_7 in memory.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_7 in memory! (computed 504.0 B so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_7 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4520_8 in memory.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_8 in memory! (computed 504.0 B so far)
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_3 in memory! (computed 5.5 MiB so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_8 to disk instead.
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_3 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_4 in memory! (computed 3.7 MiB so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_4 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_11 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_11 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4520_9 in memory.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_9 in memory! (computed 504.0 B so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_9 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_6 in memory! (computed 8.2 MiB so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_6 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4520_5 in memory.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_5 in memory! (computed 504.0 B so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_5 to disk instead.
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4486_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:47:31 WARN MemoryStore: Not enough space to cache rdd_4520_0 in memory! (computed 5.5 MiB so far)
+26/11/08 15:47:31 WARN BlockManager: Persisting block rdd_4520_0 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_5 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_2 in memory! (computed 8.2 MiB so far)
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_2 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4554_0 in memory.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_0 in memory! (computed 504.0 B so far)
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_0 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_8 in memory! (computed 3.7 MiB so far)
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_8 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:53 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4554_11 in memory.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:53 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4554_1 in memory.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_1 in memory! (computed 504.0 B so far)
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_11 in memory! (computed 504.0 B so far)
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_11 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_4 to disk instead.
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_1 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_6 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_6 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:53 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4554_9 in memory.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4554_9 in memory! (computed 504.0 B so far)
+26/11/08 15:47:53 WARN BlockManager: Persisting block rdd_4554_9 to disk instead.
+26/11/08 15:47:53 WARN MemoryStore: Not enough space to cache rdd_4520_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:47:54 WARN MemoryStore: Not enough space to cache rdd_4554_10 in memory! (computed 8.2 MiB so far)
+26/11/08 15:47:54 WARN BlockManager: Persisting block rdd_4554_10 to disk instead.
+26/11/08 15:47:54 WARN MemoryStore: Not enough space to cache rdd_4554_3 in memory! (computed 3.7 MiB so far)
+26/11/08 15:47:54 WARN BlockManager: Persisting block rdd_4554_3 to disk instead.
+26/11/08 15:47:54 WARN MemoryStore: Not enough space to cache rdd_4554_7 in memory! (computed 8.2 MiB so far)
+26/11/08 15:47:54 WARN BlockManager: Persisting block rdd_4554_7 to disk instead.
+26/11/08 15:48:12 WARN MemoryStore: Not enough space to cache rdd_4554_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:12 WARN MemoryStore: Not enough space to cache rdd_4554_9 in memory! (computed 19.5 MiB so far)
+26/11/08 15:48:12 WARN MemoryStore: Not enough space to cache rdd_4554_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:12 WARN MemoryStore: Not enough space to cache rdd_4554_1 in memory! (computed 19.5 MiB so far)
+26/11/08 15:48:12 WARN MemoryStore: Not enough space to cache rdd_4588_3 in memory! (computed 5.5 MiB so far)
+26/11/08 15:48:12 WARN BlockManager: Persisting block rdd_4588_3 to disk instead.
+26/11/08 15:48:12 WARN MemoryStore: Not enough space to cache rdd_4554_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4554_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_11 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_9 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4588_0 in memory.
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_11 to disk instead.
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_9 to disk instead.
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_0 in memory! (computed 504.0 B so far)
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_0 to disk instead.
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_1 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_4 to disk instead.
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_1 to disk instead.
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_8 to disk instead.
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4554_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4554_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_7 in memory! (computed 3.7 MiB so far)
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_5 to disk instead.
+26/11/08 15:48:13 WARN MemoryStore: Not enough space to cache rdd_4588_6 in memory! (computed 13.0 MiB so far)
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_7 to disk instead.
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_6 to disk instead.
+26/11/08 15:48:13 WARN BlockManager: Persisting block rdd_4588_10 to disk instead.
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_8 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_8 to disk instead.
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_5 to disk instead.
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_2 in memory! (computed 8.2 MiB so far)
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_6 to disk instead.
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_2 to disk instead.
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_7 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_7 to disk instead.
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_0 in memory! (computed 3.7 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_10 in memory! (computed 2.4 MiB so far)
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_10 to disk instead.
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_0 to disk instead.
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4622_1 in memory.
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_1 in memory! (computed 504.0 B so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_4 in memory! (computed 5.5 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_9 in memory! (computed 3.7 MiB so far)
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_1 to disk instead.
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_4 to disk instead.
+26/11/08 15:48:35 WARN BlockManager: Persisting block rdd_4622_9 to disk instead.
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4588_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:35 WARN MemoryStore: Not enough space to cache rdd_4622_11 in memory! (computed 13.0 MiB so far)
+26/11/08 15:48:36 WARN BlockManager: Persisting block rdd_4622_11 to disk instead.
+26/11/08 15:48:36 WARN MemoryStore: Not enough space to cache rdd_4622_3 in memory! (computed 13.0 MiB so far)
+26/11/08 15:48:36 WARN BlockManager: Persisting block rdd_4622_3 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4622_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4622_11 in memory! (computed 19.5 MiB so far)
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4622_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4656_11 in memory.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_11 in memory! (computed 504.0 B so far)
+26/11/08 15:48:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4656_0 in memory.
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_11 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_0 in memory! (computed 504.0 B so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_0 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_2 in memory! (computed 8.2 MiB so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_2 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4622_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4656_4 in memory.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_4 in memory! (computed 504.0 B so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_4 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4622_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_10 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_10 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4622_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4656_9 in memory.
+26/11/08 15:48:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4656_5 in memory.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_5 in memory! (computed 504.0 B so far)
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_9 in memory! (computed 504.0 B so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_5 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4622_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4656_3 in memory.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_3 in memory! (computed 504.0 B so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_3 to disk instead.
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_9 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4622_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_6 in memory! (computed 5.5 MiB so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_6 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_7 in memory! (computed 3.7 MiB so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_7 to disk instead.
+26/11/08 15:48:55 WARN MemoryStore: Not enough space to cache rdd_4656_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:48:55 WARN BlockManager: Persisting block rdd_4656_8 to disk instead.
+26/11/08 15:48:56 WARN MemoryStore: Not enough space to cache rdd_4622_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4690_6 in memory.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_6 in memory! (computed 504.0 B so far)
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_6 to disk instead.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_9 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_9 to disk instead.
+26/11/08 15:49:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4690_8 in memory.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_8 in memory! (computed 504.0 B so far)
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_8 to disk instead.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_2 to disk instead.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4690_4 in memory.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_4 in memory! (computed 504.0 B so far)
+26/11/08 15:49:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4690_5 in memory.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_5 in memory! (computed 504.0 B so far)
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_4 to disk instead.
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_5 to disk instead.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4690_0 in memory.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_0 in memory! (computed 504.0 B so far)
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_0 to disk instead.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4656_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4690_3 in memory.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_7 to disk instead.
+26/11/08 15:49:15 WARN MemoryStore: Not enough space to cache rdd_4690_3 in memory! (computed 504.0 B so far)
+26/11/08 15:49:15 WARN BlockManager: Persisting block rdd_4690_3 to disk instead.
+26/11/08 15:49:16 WARN MemoryStore: Not enough space to cache rdd_4656_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:16 WARN MemoryStore: Not enough space to cache rdd_4690_10 in memory! (computed 8.2 MiB so far)
+26/11/08 15:49:16 WARN BlockManager: Persisting block rdd_4690_10 to disk instead.
+26/11/08 15:49:16 WARN MemoryStore: Not enough space to cache rdd_4690_11 in memory! (computed 5.5 MiB so far)
+26/11/08 15:49:16 WARN BlockManager: Persisting block rdd_4690_11 to disk instead.
+26/11/08 15:49:16 WARN MemoryStore: Not enough space to cache rdd_4656_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:49:16 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4690_1 in memory.
+26/11/08 15:49:16 WARN MemoryStore: Not enough space to cache rdd_4690_1 in memory! (computed 504.0 B so far)
+26/11/08 15:49:16 WARN BlockManager: Persisting block rdd_4690_1 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4690_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4690_4 in memory! (computed 19.5 MiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_2 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4690_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_3 in memory! (computed 8.2 MiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_3 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_5 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_6 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4690_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_4 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4725_10 in memory.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_10 in memory! (computed 504.0 B so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_10 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4690_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4690_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4725_0 in memory.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_0 in memory! (computed 504.0 B so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_0 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_11 in memory! (computed 3.7 MiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_11 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_8 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_8 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4690_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4690_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_9 in memory! (computed 13.0 MiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_9 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_1 in memory! (computed 5.5 MiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_1 to disk instead.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_2 in memory! (computed 5.5 MiB so far)
+26/11/08 15:49:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4728_2 in memory.
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4728_2 in memory! (computed 504.0 B so far)
+26/11/08 15:49:36 WARN MemoryStore: Not enough space to cache rdd_4725_7 in memory! (computed 19.5 MiB so far)
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4725_7 to disk instead.
+26/11/08 15:49:36 WARN BlockManager: Persisting block rdd_4728_2 to disk instead.
+26/11/08 15:49:56 WARN MemoryStore: Not enough space to cache rdd_4725_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:56 WARN MemoryStore: Not enough space to cache rdd_4725_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:56 WARN MemoryStore: Not enough space to cache rdd_4725_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:56 WARN MemoryStore: Not enough space to cache rdd_4759_2 in memory! (computed 8.2 MiB so far)
+26/11/08 15:49:56 WARN BlockManager: Persisting block rdd_4759_2 to disk instead.
+26/11/08 15:49:56 WARN MemoryStore: Not enough space to cache rdd_4725_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4725_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4725_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_3 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4725_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_3 to disk instead.
+26/11/08 15:49:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4759_9 in memory.
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_11 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_4 to disk instead.
+26/11/08 15:49:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4759_5 in memory.
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_8 to disk instead.
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_1 in memory! (computed 2.4 MiB so far)
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_11 to disk instead.
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_9 in memory! (computed 504.0 B so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4725_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_5 in memory! (computed 504.0 B so far)
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_9 to disk instead.
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_1 to disk instead.
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_5 to disk instead.
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_7 in memory! (computed 2.4 MiB so far)
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_7 to disk instead.
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_0 in memory! (computed 3.7 MiB so far)
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_0 to disk instead.
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4725_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:49:57 WARN MemoryStore: Not enough space to cache rdd_4759_6 in memory! (computed 5.5 MiB so far)
+26/11/08 15:49:57 WARN BlockManager: Persisting block rdd_4759_6 to disk instead.
+26/11/08 15:49:58 WARN MemoryStore: Not enough space to cache rdd_4759_10 in memory! (computed 13.0 MiB so far)
+26/11/08 15:49:58 WARN BlockManager: Persisting block rdd_4759_10 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4793_8 in memory.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_8 in memory! (computed 504.0 B so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_8 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4793_4 in memory.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_4 in memory! (computed 504.0 B so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_4 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4793_0 in memory.
+26/11/08 15:50:17 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4793_11 in memory.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_0 in memory! (computed 504.0 B so far)
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_11 in memory! (computed 504.0 B so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_0 to disk instead.
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_11 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_9 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_9 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_2 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4793_3 in memory.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_3 in memory! (computed 504.0 B so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_3 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_7 in memory! (computed 2.4 MiB so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_7 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_5 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_6 to disk instead.
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_5 to disk instead.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4759_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:50:17 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4793_1 in memory.
+26/11/08 15:50:17 WARN MemoryStore: Not enough space to cache rdd_4793_1 in memory! (computed 504.0 B so far)
+26/11/08 15:50:17 WARN BlockManager: Persisting block rdd_4793_1 to disk instead.
+26/11/08 15:50:18 WARN MemoryStore: Not enough space to cache rdd_4793_10 in memory! (computed 8.2 MiB so far)
+26/11/08 15:50:18 WARN BlockManager: Persisting block rdd_4793_10 to disk instead.
+26/11/08 15:50:18 WARN MemoryStore: Not enough space to cache rdd_4793_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_1 in memory! (computed 19.5 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4830_2 in memory! (computed 4.0 MiB so far)
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4830_2 to disk instead.
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_1 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_1 to disk instead.
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_7 in memory! (computed 2.4 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_7 to disk instead.
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_4 to disk instead.
+26/11/08 15:50:38 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4827_6 in memory.
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_6 in memory! (computed 504.0 B so far)
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_6 to disk instead.
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_0 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_0 to disk instead.
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4793_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_11 in memory! (computed 2.4 MiB so far)
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_11 to disk instead.
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_3 in memory! (computed 3.7 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:50:38 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4827_9 in memory.
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_3 to disk instead.
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_5 to disk instead.
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_9 in memory! (computed 504.0 B so far)
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_9 to disk instead.
+26/11/08 15:50:38 WARN MemoryStore: Not enough space to cache rdd_4827_10 in memory! (computed 5.5 MiB so far)
+26/11/08 15:50:38 WARN BlockManager: Persisting block rdd_4827_10 to disk instead.
+26/11/08 15:50:39 WARN MemoryStore: Not enough space to cache rdd_4827_8 in memory! (computed 13.0 MiB so far)
+26/11/08 15:50:39 WARN BlockManager: Persisting block rdd_4827_8 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_2 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4861_11 in memory.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_11 in memory! (computed 504.0 B so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_11 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4861_1 in memory.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_1 in memory! (computed 504.0 B so far)
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_1 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4861_4 in memory.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_4 in memory! (computed 504.0 B so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_4 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_7 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4861_10 in memory.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_10 in memory! (computed 504.0 B so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_10 to disk instead.
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_7 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_9 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_9 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4861_5 in memory.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_5 in memory! (computed 504.0 B so far)
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_5 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4861_3 in memory.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_3 in memory! (computed 504.0 B so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_3 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_8 in memory! (computed 2.4 MiB so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_8 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4827_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_0 in memory! (computed 8.2 MiB so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_0 to disk instead.
+26/11/08 15:50:57 WARN MemoryStore: Not enough space to cache rdd_4861_6 in memory! (computed 13.0 MiB so far)
+26/11/08 15:50:57 WARN BlockManager: Persisting block rdd_4861_6 to disk instead.
+26/11/08 15:51:15 WARN MemoryStore: Not enough space to cache rdd_4861_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:15 WARN MemoryStore: Not enough space to cache rdd_4861_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:15 WARN MemoryStore: Not enough space to cache rdd_4861_10 in memory! (computed 19.5 MiB so far)
+26/11/08 15:51:15 WARN MemoryStore: Not enough space to cache rdd_4861_5 in memory! (computed 19.5 MiB so far)
+26/11/08 15:51:15 WARN MemoryStore: Not enough space to cache rdd_4861_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4861_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_10 in memory! (computed 3.7 MiB so far)
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4861_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_5 to disk instead.
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_10 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4895_3 in memory.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4861_0 in memory! (computed 19.5 MiB so far)
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_3 in memory! (computed 504.0 B so far)
+26/11/08 15:51:16 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4895_0 in memory.
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_3 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_0 in memory! (computed 504.0 B so far)
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_9 in memory! (computed 8.2 MiB so far)
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_0 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_7 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_9 to disk instead.
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_7 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4898_2 in memory! (computed 4.0 MiB so far)
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4898_2 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_11 in memory! (computed 8.2 MiB so far)
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_11 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4861_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_4 in memory! (computed 13.0 MiB so far)
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_4 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4861_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_8 in memory! (computed 8.2 MiB so far)
+26/11/08 15:51:16 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4895_1 in memory.
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_8 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_1 in memory! (computed 504.0 B so far)
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_1 to disk instead.
+26/11/08 15:51:16 WARN MemoryStore: Not enough space to cache rdd_4895_6 in memory! (computed 13.0 MiB so far)
+26/11/08 15:51:16 WARN BlockManager: Persisting block rdd_4895_6 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4895_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4895_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4929_1 in memory.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_1 in memory! (computed 504.0 B so far)
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_1 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4895_9 in memory! (computed 19.5 MiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4895_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_2 in memory! (computed 3.7 MiB so far)
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_2 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4895_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_10 in memory! (computed 2.4 MiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_9 in memory! (computed 2.4 MiB so far)
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_10 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_0 in memory! (computed 3.7 MiB so far)
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_9 to disk instead.
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_0 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_11 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_11 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4895_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4929_7 in memory.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_7 in memory! (computed 504.0 B so far)
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4895_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_7 to disk instead.
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_5 to disk instead.
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_4 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_6 in memory! (computed 5.5 MiB so far)
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_6 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4929_3 in memory! (computed 8.2 MiB so far)
+26/11/08 15:51:36 WARN BlockManager: Persisting block rdd_4929_3 to disk instead.
+26/11/08 15:51:36 WARN MemoryStore: Not enough space to cache rdd_4895_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:37 WARN MemoryStore: Not enough space to cache rdd_4929_8 in memory! (computed 13.0 MiB so far)
+26/11/08 15:51:37 WARN BlockManager: Persisting block rdd_4929_8 to disk instead.
+26/11/08 15:51:56 WARN MemoryStore: Not enough space to cache rdd_4929_1 in memory! (computed 19.5 MiB so far)
+26/11/08 15:51:56 WARN MemoryStore: Not enough space to cache rdd_4929_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:56 WARN MemoryStore: Not enough space to cache rdd_4929_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4929_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4929_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_1 in memory! (computed 5.5 MiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_1 to disk instead.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_3 in memory! (computed 5.5 MiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_3 to disk instead.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4966_2 in memory! (computed 4.0 MiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4966_2 to disk instead.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_9 in memory! (computed 2.4 MiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_0 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_9 to disk instead.
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_0 to disk instead.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4929_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4963_4 in memory.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_4 in memory! (computed 504.0 B so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_11 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_11 to disk instead.
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_7 to disk instead.
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_4 to disk instead.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4929_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4929_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4929_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_6 in memory! (computed 3.7 MiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_6 to disk instead.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_5 in memory! (computed 13.0 MiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_5 to disk instead.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_8 in memory! (computed 5.5 MiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_8 to disk instead.
+26/11/08 15:51:57 WARN MemoryStore: Not enough space to cache rdd_4963_10 in memory! (computed 3.7 MiB so far)
+26/11/08 15:51:57 WARN BlockManager: Persisting block rdd_4963_10 to disk instead.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4963_9 in memory! (computed 19.5 MiB so far)
+26/11/08 15:52:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4997_9 in memory.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4997_9 in memory! (computed 504.0 B so far)
+26/11/08 15:52:15 WARN BlockManager: Persisting block rdd_4997_9 to disk instead.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4963_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4997_3 in memory.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4997_3 in memory! (computed 504.0 B so far)
+26/11/08 15:52:15 WARN BlockManager: Persisting block rdd_4997_3 to disk instead.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4963_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4997_5 in memory.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4963_8 in memory! (computed 19.5 MiB so far)
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4997_5 in memory! (computed 504.0 B so far)
+26/11/08 15:52:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4997_8 in memory.
+26/11/08 15:52:15 WARN BlockManager: Persisting block rdd_4997_5 to disk instead.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4997_8 in memory! (computed 504.0 B so far)
+26/11/08 15:52:15 WARN BlockManager: Persisting block rdd_4997_8 to disk instead.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4963_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:15 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4997_7 in memory.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4997_7 in memory! (computed 504.0 B so far)
+26/11/08 15:52:15 WARN BlockManager: Persisting block rdd_4997_7 to disk instead.
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4963_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:15 WARN MemoryStore: Not enough space to cache rdd_4963_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:16 WARN MemoryStore: Not enough space to cache rdd_4963_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:16 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4997_11 in memory.
+26/11/08 15:52:16 WARN MemoryStore: Not enough space to cache rdd_4997_11 in memory! (computed 504.0 B so far)
+26/11/08 15:52:16 WARN BlockManager: Persisting block rdd_4997_11 to disk instead.
+26/11/08 15:52:16 WARN MemoryStore: Not enough space to cache rdd_4997_0 in memory! (computed 3.7 MiB so far)
+26/11/08 15:52:16 WARN BlockManager: Persisting block rdd_4997_0 to disk instead.
+26/11/08 15:52:16 WARN MemoryStore: Not enough space to cache rdd_4963_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:16 WARN MemoryStore: Not enough space to cache rdd_4997_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:52:16 WARN BlockManager: Persisting block rdd_4997_10 to disk instead.
+26/11/08 15:52:16 WARN MemoryStore: Not enough space to cache rdd_4997_4 in memory! (computed 2.4 MiB so far)
+26/11/08 15:52:16 WARN BlockManager: Persisting block rdd_4997_4 to disk instead.
+26/11/08 15:52:16 WARN MemoryStore: Not enough space to cache rdd_4997_6 in memory! (computed 13.0 MiB so far)
+26/11/08 15:52:16 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_4997_1 in memory.
+26/11/08 15:52:16 WARN BlockManager: Persisting block rdd_4997_6 to disk instead.
+26/11/08 15:52:16 WARN MemoryStore: Not enough space to cache rdd_4997_1 in memory! (computed 504.0 B so far)
+26/11/08 15:52:16 WARN BlockManager: Persisting block rdd_4997_1 to disk instead.
+26/11/08 15:52:32 WARN DAGScheduler: Broadcasting large task binary with size 1015.0 KiB
+26/11/08 15:52:34 WARN DAGScheduler: Broadcasting large task binary with size 1051.5 KiB
+26/11/08 15:52:36 WARN DAGScheduler: Broadcasting large task binary with size 1059.6 KiB
+26/11/08 15:52:37 WARN MemoryStore: Not enough space to cache rdd_4997_3 in memory! (computed 19.5 MiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_4997_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_4997_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_3 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_4997_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5031_4 in memory.
+26/11/08 15:52:38 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5031_6 in memory.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_4 in memory! (computed 504.0 B so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_6 in memory! (computed 504.0 B so far)
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_3 to disk instead.
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_4 to disk instead.
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_6 to disk instead.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_4997_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_4997_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_4997_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5031_9 in memory.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_9 in memory! (computed 504.0 B so far)
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_5 to disk instead.
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_9 to disk instead.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_1 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_1 to disk instead.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_0 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_0 to disk instead.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_10 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_4997_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_10 to disk instead.
+26/11/08 15:52:38 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5031_7 in memory.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_7 in memory! (computed 504.0 B so far)
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_7 to disk instead.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_4997_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_11 in memory! (computed 5.5 MiB so far)
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_11 to disk instead.
+26/11/08 15:52:38 WARN MemoryStore: Not enough space to cache rdd_5031_8 in memory! (computed 8.2 MiB so far)
+26/11/08 15:52:38 WARN BlockManager: Persisting block rdd_5031_8 to disk instead.
+26/11/08 15:52:43 WARN DAGScheduler: Broadcasting large task binary with size 1054.2 KiB
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_2 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_9 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_9 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5066_8 in memory.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_8 in memory! (computed 504.0 B so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_8 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_0 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5066_1 in memory.
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_0 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_1 in memory! (computed 504.0 B so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_1 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_4 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5066_3 in memory.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_3 in memory! (computed 504.0 B so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_3 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_7 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5031_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_11 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_11 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_10 in memory! (computed 2.4 MiB so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_10 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_6 in memory! (computed 13.0 MiB so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_6 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_5 in memory! (computed 19.5 MiB so far)
+26/11/08 15:52:59 WARN BlockManager: Persisting block rdd_5066_5 to disk instead.
+26/11/08 15:52:59 WARN MemoryStore: Not enough space to cache rdd_5066_2 in memory! (computed 5.5 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5100_3 in memory.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_3 in memory! (computed 504.0 B so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_3 to disk instead.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5100_1 in memory.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_1 in memory! (computed 504.0 B so far)
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_2 to disk instead.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_0 in memory! (computed 2.4 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_1 to disk instead.
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_0 to disk instead.
+26/11/08 15:53:19 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5100_6 in memory.
+26/11/08 15:53:19 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5100_10 in memory.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_10 in memory! (computed 504.0 B so far)
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_6 in memory! (computed 504.0 B so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_10 to disk instead.
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_6 to disk instead.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5100_9 in memory.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_9 in memory! (computed 504.0 B so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_9 to disk instead.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5100_8 in memory.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_8 in memory! (computed 504.0 B so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_8 to disk instead.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_4 to disk instead.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_7 to disk instead.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5066_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:19 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5100_5 in memory.
+26/11/08 15:53:19 WARN MemoryStore: Not enough space to cache rdd_5100_5 in memory! (computed 504.0 B so far)
+26/11/08 15:53:19 WARN BlockManager: Persisting block rdd_5100_5 to disk instead.
+26/11/08 15:53:20 WARN MemoryStore: Not enough space to cache rdd_5100_11 in memory! (computed 19.5 MiB so far)
+26/11/08 15:53:20 WARN BlockManager: Persisting block rdd_5100_11 to disk instead.
+26/11/08 15:53:20 WARN MemoryStore: Not enough space to cache rdd_5100_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:53:20 WARN MemoryStore: Not enough space to cache rdd_5103_2 in memory! (computed 4.0 MiB so far)
+26/11/08 15:53:20 WARN BlockManager: Persisting block rdd_5103_2 to disk instead.
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5100_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5100_11 in memory! (computed 19.5 MiB so far)
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5100_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5100_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5134_9 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:53:38 WARN BlockManager: Persisting block rdd_5134_9 to disk instead.
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5134_11 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:53:38 WARN BlockManager: Persisting block rdd_5134_11 to disk instead.
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5134_2 in memory! (computed 5.5 MiB so far)
+26/11/08 15:53:38 WARN BlockManager: Persisting block rdd_5134_2 to disk instead.
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5100_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5100_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:38 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5134_3 in memory.
+26/11/08 15:53:38 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5134_0 in memory.
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5134_3 in memory! (computed 504.0 B so far)
+26/11/08 15:53:38 WARN MemoryStore: Not enough space to cache rdd_5134_0 in memory! (computed 504.0 B so far)
+26/11/08 15:53:38 WARN BlockManager: Persisting block rdd_5134_3 to disk instead.
+26/11/08 15:53:38 WARN BlockManager: Persisting block rdd_5134_0 to disk instead.
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5134_6 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:53:39 WARN BlockManager: Persisting block rdd_5134_6 to disk instead.
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5134_10 in memory! (computed 2.4 MiB so far)
+26/11/08 15:53:39 WARN BlockManager: Persisting block rdd_5134_10 to disk instead.
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5100_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5100_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5100_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5134_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:53:39 WARN BlockManager: Persisting block rdd_5134_5 to disk instead.
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5134_4 in memory! (computed 8.2 MiB so far)
+26/11/08 15:53:39 WARN BlockManager: Persisting block rdd_5134_4 to disk instead.
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5134_1 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:53:39 WARN BlockManager: Persisting block rdd_5134_1 to disk instead.
+26/11/08 15:53:39 WARN MemoryStore: Not enough space to cache rdd_5134_7 in memory! (computed 8.2 MiB so far)
+26/11/08 15:53:39 WARN BlockManager: Persisting block rdd_5134_7 to disk instead.
+26/11/08 15:53:40 WARN MemoryStore: Not enough space to cache rdd_5134_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:40 WARN BlockManager: Persisting block rdd_5134_8 to disk instead.
+26/11/08 15:53:56 WARN MemoryStore: Not enough space to cache rdd_5134_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:56 WARN MemoryStore: Not enough space to cache rdd_5134_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:56 WARN MemoryStore: Not enough space to cache rdd_5134_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:56 WARN MemoryStore: Not enough space to cache rdd_5134_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:56 WARN MemoryStore: Not enough space to cache rdd_5134_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_4 in memory! (computed 2.4 MiB so far)
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_4 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_7 in memory! (computed 3.7 MiB so far)
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5134_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_1 in memory! (computed 3.7 MiB so far)
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5134_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5171_2 in memory! (computed 1024.7 KiB so far)
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_1 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_9 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:53:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5168_8 in memory.
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_9 to disk instead.
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_7 to disk instead.
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5171_2 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_6 in memory! (computed 2.4 MiB so far)
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_6 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5168_10 in memory.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5134_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_8 in memory! (computed 504.0 B so far)
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_8 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_10 in memory! (computed 504.0 B so far)
+26/11/08 15:53:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5168_11 in memory.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5134_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_10 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_11 in memory! (computed 504.0 B so far)
+26/11/08 15:53:57 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5168_5 in memory.
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_11 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_5 in memory! (computed 504.0 B so far)
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_5 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5134_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_0 in memory! (computed 13.0 MiB so far)
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_0 to disk instead.
+26/11/08 15:53:57 WARN MemoryStore: Not enough space to cache rdd_5168_3 in memory! (computed 13.0 MiB so far)
+26/11/08 15:53:57 WARN BlockManager: Persisting block rdd_5168_3 to disk instead.
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_5 in memory! (computed 19.5 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_3 in memory! (computed 5.5 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_3 to disk instead.
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_9 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_10 to disk instead.
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_2 to disk instead.
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_8 to disk instead.
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_9 to disk instead.
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_7 to disk instead.
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_5 to disk instead.
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_6 to disk instead.
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_11 in memory! (computed 5.5 MiB so far)
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_11 to disk instead.
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_0 in memory! (computed 2.4 MiB so far)
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_0 to disk instead.
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5202_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:54:16 WARN BlockManager: Persisting block rdd_5202_4 to disk instead.
+26/11/08 15:54:16 WARN MemoryStore: Not enough space to cache rdd_5168_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:54:17 WARN MemoryStore: Not enough space to cache rdd_5202_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:17 WARN BlockManager: Persisting block rdd_5202_1 to disk instead.
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_4 to disk instead.
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_9 in memory! (computed 5.5 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_9 to disk instead.
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_5 to disk instead.
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_6 in memory! (computed 3.7 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5239_2 in memory! (computed 10.8 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_10 in memory! (computed 3.7 MiB so far)
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_10 to disk instead.
+26/11/08 15:54:34 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5236_3 in memory.
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_6 to disk instead.
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5239_2 to disk instead.
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_3 in memory! (computed 504.0 B so far)
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_3 to disk instead.
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_1 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5202_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_0 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_8 to disk instead.
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_1 to disk instead.
+26/11/08 15:54:34 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5236_7 in memory.
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_0 to disk instead.
+26/11/08 15:54:34 WARN MemoryStore: Not enough space to cache rdd_5236_7 in memory! (computed 504.0 B so far)
+26/11/08 15:54:34 WARN BlockManager: Persisting block rdd_5236_7 to disk instead.
+26/11/08 15:54:35 WARN MemoryStore: Not enough space to cache rdd_5236_11 in memory! (computed 19.5 MiB so far)
+26/11/08 15:54:35 WARN BlockManager: Persisting block rdd_5236_11 to disk instead.
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5236_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5236_3 in memory! (computed 19.5 MiB so far)
+26/11/08 15:54:52 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5270_3 in memory.
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5270_3 in memory! (computed 504.0 B so far)
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5270_2 in memory! (computed 5.5 MiB so far)
+26/11/08 15:54:52 WARN BlockManager: Persisting block rdd_5270_3 to disk instead.
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5236_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:52 WARN BlockManager: Persisting block rdd_5270_2 to disk instead.
+26/11/08 15:54:52 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5270_0 in memory.
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5270_0 in memory! (computed 504.0 B so far)
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5236_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5270_9 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:54:52 WARN BlockManager: Persisting block rdd_5270_9 to disk instead.
+26/11/08 15:54:52 WARN BlockManager: Persisting block rdd_5270_0 to disk instead.
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5270_5 in memory! (computed 13.0 MiB so far)
+26/11/08 15:54:52 WARN BlockManager: Persisting block rdd_5270_5 to disk instead.
+26/11/08 15:54:52 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5270_11 in memory.
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5270_11 in memory! (computed 504.0 B so far)
+26/11/08 15:54:52 WARN BlockManager: Persisting block rdd_5270_11 to disk instead.
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5270_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:54:52 WARN BlockManager: Persisting block rdd_5270_6 to disk instead.
+26/11/08 15:54:52 WARN MemoryStore: Not enough space to cache rdd_5236_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:53 WARN MemoryStore: Not enough space to cache rdd_5236_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:54:53 WARN MemoryStore: Not enough space to cache rdd_5236_4 in memory! (computed 19.5 MiB so far)
+26/11/08 15:54:53 WARN MemoryStore: Not enough space to cache rdd_5270_8 in memory! (computed 5.5 MiB so far)
+26/11/08 15:54:53 WARN BlockManager: Persisting block rdd_5270_8 to disk instead.
+26/11/08 15:54:53 WARN MemoryStore: Not enough space to cache rdd_5270_4 in memory! (computed 3.7 MiB so far)
+26/11/08 15:54:53 WARN BlockManager: Persisting block rdd_5270_4 to disk instead.
+26/11/08 15:54:53 WARN MemoryStore: Not enough space to cache rdd_5270_10 in memory! (computed 5.5 MiB so far)
+26/11/08 15:54:53 WARN BlockManager: Persisting block rdd_5270_10 to disk instead.
+26/11/08 15:54:53 WARN MemoryStore: Not enough space to cache rdd_5270_7 in memory! (computed 13.0 MiB so far)
+26/11/08 15:54:53 WARN BlockManager: Persisting block rdd_5270_7 to disk instead.
+26/11/08 15:54:53 WARN MemoryStore: Not enough space to cache rdd_5236_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:54:53 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5270_1 in memory.
+26/11/08 15:54:53 WARN MemoryStore: Not enough space to cache rdd_5270_1 in memory! (computed 504.0 B so far)
+26/11/08 15:54:53 WARN BlockManager: Persisting block rdd_5270_1 to disk instead.
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_3 in memory! (computed 19.5 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5304_9 in memory! (computed 3.7 MiB so far)
+26/11/08 15:55:13 WARN BlockManager: Persisting block rdd_5304_9 to disk instead.
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5304_11 in memory! (computed 5.5 MiB so far)
+26/11/08 15:55:13 WARN BlockManager: Persisting block rdd_5304_11 to disk instead.
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5304_3 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5304_6 in memory! (computed 5.5 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5307_2 in memory! (computed 2.7 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5304_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:55:13 WARN BlockManager: Persisting block rdd_5304_7 to disk instead.
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5304_10 in memory! (computed 3.7 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5304_1 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:55:13 WARN BlockManager: Persisting block rdd_5304_3 to disk instead.
+26/11/08 15:55:13 WARN BlockManager: Persisting block rdd_5304_1 to disk instead.
+26/11/08 15:55:13 WARN BlockManager: Persisting block rdd_5304_10 to disk instead.
+26/11/08 15:55:13 WARN BlockManager: Persisting block rdd_5304_6 to disk instead.
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:13 WARN BlockManager: Persisting block rdd_5307_2 to disk instead.
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:13 WARN MemoryStore: Not enough space to cache rdd_5270_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:14 WARN MemoryStore: Not enough space to cache rdd_5304_5 in memory! (computed 8.2 MiB so far)
+26/11/08 15:55:14 WARN MemoryStore: Not enough space to cache rdd_5304_8 in memory! (computed 5.5 MiB so far)
+26/11/08 15:55:14 WARN BlockManager: Persisting block rdd_5304_5 to disk instead.
+26/11/08 15:55:14 WARN BlockManager: Persisting block rdd_5304_8 to disk instead.
+26/11/08 15:55:14 WARN MemoryStore: Not enough space to cache rdd_5304_4 in memory! (computed 8.2 MiB so far)
+26/11/08 15:55:14 WARN BlockManager: Persisting block rdd_5304_4 to disk instead.
+26/11/08 15:55:14 WARN MemoryStore: Not enough space to cache rdd_5304_0 in memory! (computed 5.5 MiB so far)
+26/11/08 15:55:14 WARN BlockManager: Persisting block rdd_5304_0 to disk instead.
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5304_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5304_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5304_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:33 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5338_8 in memory.
+26/11/08 15:55:33 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5338_3 in memory.
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5304_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5338_8 in memory! (computed 504.0 B so far)
+26/11/08 15:55:33 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5338_1 in memory.
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5338_3 in memory! (computed 504.0 B so far)
+26/11/08 15:55:33 WARN BlockManager: Persisting block rdd_5338_8 to disk instead.
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5338_1 in memory! (computed 504.0 B so far)
+26/11/08 15:55:33 WARN BlockManager: Persisting block rdd_5338_3 to disk instead.
+26/11/08 15:55:33 WARN BlockManager: Persisting block rdd_5338_1 to disk instead.
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5338_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:55:33 WARN BlockManager: Persisting block rdd_5338_7 to disk instead.
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5304_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:33 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5338_10 in memory.
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5338_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:55:33 WARN MemoryStore: Not enough space to cache rdd_5338_10 in memory! (computed 504.0 B so far)
+26/11/08 15:55:33 WARN BlockManager: Persisting block rdd_5338_5 to disk instead.
+26/11/08 15:55:33 WARN BlockManager: Persisting block rdd_5338_10 to disk instead.
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5304_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5304_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5338_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:55:34 WARN BlockManager: Persisting block rdd_5338_2 to disk instead.
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5304_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:34 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5338_6 in memory.
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5338_6 in memory! (computed 504.0 B so far)
+26/11/08 15:55:34 WARN BlockManager: Persisting block rdd_5338_6 to disk instead.
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5304_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5338_11 in memory! (computed 2.4 MiB so far)
+26/11/08 15:55:34 WARN BlockManager: Persisting block rdd_5338_11 to disk instead.
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5338_0 in memory! (computed 5.5 MiB so far)
+26/11/08 15:55:34 WARN BlockManager: Persisting block rdd_5338_0 to disk instead.
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5338_9 in memory! (computed 3.7 MiB so far)
+26/11/08 15:55:34 WARN BlockManager: Persisting block rdd_5338_9 to disk instead.
+26/11/08 15:55:34 WARN MemoryStore: Not enough space to cache rdd_5338_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:55:34 WARN BlockManager: Persisting block rdd_5338_4 to disk instead.
+26/11/08 15:55:51 WARN DAGScheduler: Broadcasting large task binary with size 1012.5 KiB
+26/11/08 15:55:53 WARN DAGScheduler: Broadcasting large task binary with size 1045.5 KiB
+26/11/08 15:55:55 WARN DAGScheduler: Broadcasting large task binary with size 1050.9 KiB
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_2 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5372_5 in memory.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_5 in memory! (computed 504.0 B so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_5 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5372_7 in memory.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_7 in memory! (computed 504.0 B so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_7 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_8 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5372_10 in memory.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_10 in memory! (computed 504.0 B so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_10 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_11 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_11 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5372_0 in memory.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_0 in memory! (computed 504.0 B so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_0 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5372_9 in memory.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_9 in memory! (computed 504.0 B so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_9 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_3 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_3 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5338_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_1 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_1 to disk instead.
+26/11/08 15:55:56 WARN MemoryStore: Not enough space to cache rdd_5372_6 in memory! (computed 5.5 MiB so far)
+26/11/08 15:55:56 WARN BlockManager: Persisting block rdd_5372_6 to disk instead.
+26/11/08 15:55:57 WARN MemoryStore: Not enough space to cache rdd_5372_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:55:57 WARN MemoryStore: Not enough space to cache rdd_5372_4 in memory! (computed 19.5 MiB so far)
+26/11/08 15:55:57 WARN BlockManager: Persisting block rdd_5372_4 to disk instead.
+26/11/08 15:55:57 WARN MemoryStore: Not enough space to cache rdd_5375_2 in memory! (computed 2.7 MiB so far)
+26/11/08 15:55:57 WARN BlockManager: Persisting block rdd_5375_2 to disk instead.
+26/11/08 15:56:02 WARN DAGScheduler: Broadcasting large task binary with size 1045.5 KiB
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5407_3 in memory! (computed 2.4 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5407_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5407_3 to disk instead.
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5407_5 to disk instead.
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5407_10 in memory! (computed 8.2 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5410_2 in memory! (computed 6.2 MiB so far)
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5410_2 to disk instead.
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5407_1 in memory! (computed 2.4 MiB so far)
+26/11/08 15:56:17 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5407_4 in memory.
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5407_7 in memory! (computed 3.7 MiB so far)
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5407_10 to disk instead.
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5407_4 in memory! (computed 504.0 B so far)
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5407_1 to disk instead.
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5407_4 to disk instead.
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5407_7 to disk instead.
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5407_8 in memory! (computed 2.4 MiB so far)
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5407_8 to disk instead.
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5407_11 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:56:17 WARN BlockManager: Persisting block rdd_5407_11 to disk instead.
+26/11/08 15:56:17 WARN MemoryStore: Not enough space to cache rdd_5372_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:18 WARN MemoryStore: Not enough space to cache rdd_5407_0 in memory! (computed 8.2 MiB so far)
+26/11/08 15:56:18 WARN BlockManager: Persisting block rdd_5407_0 to disk instead.
+26/11/08 15:56:18 WARN MemoryStore: Not enough space to cache rdd_5407_9 in memory! (computed 5.5 MiB so far)
+26/11/08 15:56:18 WARN BlockManager: Persisting block rdd_5407_9 to disk instead.
+26/11/08 15:56:18 WARN MemoryStore: Not enough space to cache rdd_5407_6 in memory! (computed 5.5 MiB so far)
+26/11/08 15:56:18 WARN BlockManager: Persisting block rdd_5407_6 to disk instead.
+26/11/08 15:56:35 WARN MemoryStore: Not enough space to cache rdd_5407_3 in memory! (computed 19.5 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5441_3 in memory.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_3 in memory! (computed 504.0 B so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_3 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5441_8 in memory.
+26/11/08 15:56:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5441_5 in memory.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_5 in memory! (computed 504.0 B so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_5 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_8 in memory! (computed 504.0 B so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_8 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_10 in memory! (computed 19.5 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5444_2 in memory! (computed 10.8 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5444_2 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_11 in memory! (computed 2.4 MiB so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_11 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_10 in memory! (computed 5.5 MiB so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_10 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_7 in memory! (computed 2.4 MiB so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_7 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5441_1 in memory.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_1 in memory! (computed 504.0 B so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_1 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_0 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_0 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5407_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:36 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5441_4 in memory.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_4 in memory! (computed 504.0 B so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_4 to disk instead.
+26/11/08 15:56:36 WARN MemoryStore: Not enough space to cache rdd_5441_9 in memory! (computed 3.7 MiB so far)
+26/11/08 15:56:36 WARN BlockManager: Persisting block rdd_5441_9 to disk instead.
+26/11/08 15:56:37 WARN MemoryStore: Not enough space to cache rdd_5441_6 in memory! (computed 13.0 MiB so far)
+26/11/08 15:56:37 WARN BlockManager: Persisting block rdd_5441_6 to disk instead.
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5475_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:56:54 WARN BlockManager: Persisting block rdd_5475_5 to disk instead.
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5475_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:56:54 WARN BlockManager: Persisting block rdd_5475_2 to disk instead.
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5441_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:54 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5475_6 in memory.
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5475_6 in memory! (computed 504.0 B so far)
+26/11/08 15:56:54 WARN BlockManager: Persisting block rdd_5475_6 to disk instead.
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5441_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:54 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5475_3 in memory.
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5475_3 in memory! (computed 504.0 B so far)
+26/11/08 15:56:54 WARN BlockManager: Persisting block rdd_5475_3 to disk instead.
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5441_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5441_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:54 WARN MemoryStore: Not enough space to cache rdd_5475_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:56:54 WARN BlockManager: Persisting block rdd_5475_8 to disk instead.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5475_0 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:56:55 WARN BlockManager: Persisting block rdd_5475_0 to disk instead.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5441_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5475_9 in memory.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5441_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5475_9 in memory! (computed 504.0 B so far)
+26/11/08 15:56:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5475_1 in memory.
+26/11/08 15:56:55 WARN BlockManager: Persisting block rdd_5475_9 to disk instead.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5441_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5475_1 in memory! (computed 504.0 B so far)
+26/11/08 15:56:55 WARN BlockManager: Persisting block rdd_5475_1 to disk instead.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5441_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5441_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:56:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5475_7 in memory.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5475_7 in memory! (computed 504.0 B so far)
+26/11/08 15:56:55 WARN BlockManager: Persisting block rdd_5475_7 to disk instead.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5475_11 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:56:55 WARN BlockManager: Persisting block rdd_5475_11 to disk instead.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5475_10 in memory! (computed 5.5 MiB so far)
+26/11/08 15:56:55 WARN BlockManager: Persisting block rdd_5475_10 to disk instead.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5475_4 in memory! (computed 19.5 MiB so far)
+26/11/08 15:56:55 WARN BlockManager: Persisting block rdd_5475_4 to disk instead.
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5475_2 in memory! (computed 13.0 MiB so far)
+26/11/08 15:56:55 WARN MemoryStore: Not enough space to cache rdd_5478_2 in memory! (computed 4.0 MiB so far)
+26/11/08 15:56:55 WARN BlockManager: Persisting block rdd_5478_2 to disk instead.
+26/11/08 15:57:12 WARN MemoryStore: Not enough space to cache rdd_5475_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:12 WARN MemoryStore: Not enough space to cache rdd_5475_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:12 WARN MemoryStore: Not enough space to cache rdd_5475_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:12 WARN MemoryStore: Not enough space to cache rdd_5475_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:12 WARN MemoryStore: Not enough space to cache rdd_5512_2 in memory! (computed 2.7 MiB so far)
+26/11/08 15:57:12 WARN MemoryStore: Not enough space to cache rdd_5475_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:12 WARN BlockManager: Persisting block rdd_5512_2 to disk instead.
+26/11/08 15:57:12 WARN MemoryStore: Not enough space to cache rdd_5475_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_5 in memory! (computed 2.4 MiB so far)
+26/11/08 15:57:12 WARN MemoryStore: Not enough space to cache rdd_5509_9 in memory! (computed 3.7 MiB so far)
+26/11/08 15:57:12 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5509_8 in memory.
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_9 to disk instead.
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5475_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_5 to disk instead.
+26/11/08 15:57:13 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5509_7 in memory.
+26/11/08 15:57:13 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5509_10 in memory.
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_11 in memory! (computed 5.5 MiB so far)
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_11 to disk instead.
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_10 in memory! (computed 504.0 B so far)
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_7 in memory! (computed 504.0 B so far)
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_8 in memory! (computed 504.0 B so far)
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_10 to disk instead.
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_8 to disk instead.
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_7 to disk instead.
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_4 to disk instead.
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5475_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5475_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5475_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_6 in memory! (computed 5.5 MiB so far)
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_6 to disk instead.
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_1 in memory! (computed 8.2 MiB so far)
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_1 to disk instead.
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_0 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_0 to disk instead.
+26/11/08 15:57:13 WARN MemoryStore: Not enough space to cache rdd_5509_3 in memory! (computed 8.2 MiB so far)
+26/11/08 15:57:13 WARN BlockManager: Persisting block rdd_5509_3 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_0 in memory! (computed 19.5 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_6 in memory! (computed 19.5 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_9 in memory! (computed 3.7 MiB so far)
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_9 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5546_2 in memory! (computed 6.2 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_6 in memory! (computed 3.7 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_0 in memory! (computed 3.7 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5543_10 in memory.
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5546_2 to disk instead.
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_0 to disk instead.
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_6 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_10 in memory! (computed 504.0 B so far)
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_10 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_4 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_5 to disk instead.
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_8 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_7 in memory! (computed 8.2 MiB so far)
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_7 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_11 in memory! (computed 5.5 MiB so far)
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_11 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_3 in memory! (computed 13.0 MiB so far)
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_3 to disk instead.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5509_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:57:32 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5543_1 in memory.
+26/11/08 15:57:32 WARN MemoryStore: Not enough space to cache rdd_5543_1 in memory! (computed 504.0 B so far)
+26/11/08 15:57:32 WARN BlockManager: Persisting block rdd_5543_1 to disk instead.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5543_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5543_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5543_7 in memory! (computed 19.5 MiB so far)
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5543_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5580_2 in memory! (computed 1537.4 KiB so far)
+26/11/08 15:57:50 WARN BlockManager: Persisting block rdd_5580_2 to disk instead.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5543_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:50 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5577_11 in memory.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5577_11 in memory! (computed 504.0 B so far)
+26/11/08 15:57:50 WARN BlockManager: Persisting block rdd_5577_11 to disk instead.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5577_5 in memory! (computed 3.7 MiB so far)
+26/11/08 15:57:50 WARN BlockManager: Persisting block rdd_5577_5 to disk instead.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5577_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5543_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:50 WARN BlockManager: Persisting block rdd_5577_4 to disk instead.
+26/11/08 15:57:50 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5577_9 in memory.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5577_9 in memory! (computed 504.0 B so far)
+26/11/08 15:57:50 WARN BlockManager: Persisting block rdd_5577_9 to disk instead.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5543_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5577_7 in memory! (computed 3.7 MiB so far)
+26/11/08 15:57:50 WARN BlockManager: Persisting block rdd_5577_7 to disk instead.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5577_10 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:57:50 WARN BlockManager: Persisting block rdd_5577_10 to disk instead.
+26/11/08 15:57:50 WARN MemoryStore: Not enough space to cache rdd_5577_0 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:57:51 WARN BlockManager: Persisting block rdd_5577_0 to disk instead.
+26/11/08 15:57:51 WARN MemoryStore: Not enough space to cache rdd_5543_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:57:51 WARN MemoryStore: Not enough space to cache rdd_5577_8 in memory! (computed 8.2 MiB so far)
+26/11/08 15:57:51 WARN BlockManager: Persisting block rdd_5577_8 to disk instead.
+26/11/08 15:57:51 WARN MemoryStore: Not enough space to cache rdd_5543_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:57:51 WARN MemoryStore: Not enough space to cache rdd_5577_3 in memory! (computed 5.5 MiB so far)
+26/11/08 15:57:51 WARN BlockManager: Persisting block rdd_5577_3 to disk instead.
+26/11/08 15:57:51 WARN MemoryStore: Not enough space to cache rdd_5577_1 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:57:51 WARN BlockManager: Persisting block rdd_5577_1 to disk instead.
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5577_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5577_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5577_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5577_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5577_4 in memory! (computed 19.5 MiB so far)
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5577_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5577_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5614_2 in memory! (computed 4.0 MiB so far)
+26/11/08 15:58:11 WARN BlockManager: Persisting block rdd_5614_2 to disk instead.
+26/11/08 15:58:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5611_7 in memory.
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5577_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:11 WARN MemoryStore: Not enough space to cache rdd_5611_7 in memory! (computed 504.0 B so far)
+26/11/08 15:58:11 WARN BlockManager: Persisting block rdd_5611_7 to disk instead.
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_10 in memory! (computed 3.7 MiB so far)
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_10 to disk instead.
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_8 in memory! (computed 5.5 MiB so far)
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_8 to disk instead.
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_4 in memory! (computed 3.7 MiB so far)
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_4 to disk instead.
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5577_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:12 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5611_5 in memory.
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_5 in memory! (computed 504.0 B so far)
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_11 in memory! (computed 5.5 MiB so far)
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_1 in memory! (computed 5.5 MiB so far)
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_5 to disk instead.
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_1 to disk instead.
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_11 to disk instead.
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_6 to disk instead.
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_0 in memory! (computed 2.4 MiB so far)
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_0 to disk instead.
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5577_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:12 WARN MemoryStore: Not enough space to cache rdd_5611_9 in memory! (computed 13.0 MiB so far)
+26/11/08 15:58:12 WARN BlockManager: Persisting block rdd_5611_9 to disk instead.
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5611_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5611_6 in memory! (computed 19.5 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5645_4 in memory! (computed 2.4 MiB so far)
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5645_4 to disk instead.
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5611_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5611_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5645_3 in memory.
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5645_3 in memory! (computed 504.0 B so far)
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5645_3 to disk instead.
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5611_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5645_5 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5645_5 to disk instead.
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5645_11 in memory! (computed 2.4 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5645_10 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5645_11 to disk instead.
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5645_7 in memory! (computed 2.4 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5648_2 in memory! (computed 2.7 MiB so far)
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5645_7 to disk instead.
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5645_6 in memory! (computed 3.7 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5645_0 in memory! (computed 3.7 MiB so far)
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5645_10 to disk instead.
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5648_2 to disk instead.
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5645_0 to disk instead.
+26/11/08 15:58:39 WARN BlockManager: Persisting block rdd_5645_6 to disk instead.
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5611_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:39 WARN MemoryStore: Not enough space to cache rdd_5611_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:40 WARN MemoryStore: Not enough space to cache rdd_5645_8 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:58:40 WARN BlockManager: Persisting block rdd_5645_8 to disk instead.
+26/11/08 15:58:40 WARN MemoryStore: Not enough space to cache rdd_5645_9 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:58:40 WARN BlockManager: Persisting block rdd_5645_9 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_5 in memory! (computed 19.5 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_10 in memory! (computed 2.4 MiB so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_10 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_6 in memory! (computed 2.4 MiB so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_6 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_11 in memory! (computed 3.7 MiB so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_11 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5682_2 in memory! (computed 10.8 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_5 in memory! (computed 3.7 MiB so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_5 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5682_2 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5679_8 in memory.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_8 in memory! (computed 504.0 B so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_9 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5679_4 in memory.
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_8 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_9 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_4 in memory! (computed 504.0 B so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_7 to disk instead.
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_4 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_1 in memory! (computed 43.9 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5645_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_0 in memory! (computed 8.2 MiB so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_0 to disk instead.
+26/11/08 15:58:58 WARN MemoryStore: Not enough space to cache rdd_5679_1 in memory! (computed 3.7 MiB so far)
+26/11/08 15:58:58 WARN BlockManager: Persisting block rdd_5679_1 to disk instead.
+26/11/08 15:59:16 WARN DAGScheduler: Broadcasting large task binary with size 1003.9 KiB
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_5 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5713_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:59:17 WARN BlockManager: Persisting block rdd_5713_5 to disk instead.
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5713_2 in memory! (computed 8.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5713_0 in memory! (computed 2.4 MiB so far)
+26/11/08 15:59:17 WARN BlockManager: Persisting block rdd_5713_0 to disk instead.
+26/11/08 15:59:17 WARN BlockManager: Persisting block rdd_5713_2 to disk instead.
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5713_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:59:17 WARN BlockManager: Persisting block rdd_5713_8 to disk instead.
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5713_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5713_10 in memory.
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5713_1 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:59:17 WARN BlockManager: Persisting block rdd_5713_6 to disk instead.
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5713_10 in memory! (computed 504.0 B so far)
+26/11/08 15:59:17 WARN BlockManager: Persisting block rdd_5713_1 to disk instead.
+26/11/08 15:59:17 WARN BlockManager: Persisting block rdd_5713_10 to disk instead.
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_3 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:17 WARN MemoryStore: Not enough space to cache rdd_5679_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:18 WARN MemoryStore: Not enough space to cache rdd_5679_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:18 WARN MemoryStore: Not enough space to cache rdd_5713_9 in memory! (computed 5.5 MiB so far)
+26/11/08 15:59:18 WARN BlockManager: Persisting block rdd_5713_9 to disk instead.
+26/11/08 15:59:18 WARN MemoryStore: Not enough space to cache rdd_5713_11 in memory! (computed 2.4 MiB so far)
+26/11/08 15:59:18 WARN BlockManager: Persisting block rdd_5713_11 to disk instead.
+26/11/08 15:59:18 WARN MemoryStore: Not enough space to cache rdd_5713_7 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:59:18 WARN BlockManager: Persisting block rdd_5713_7 to disk instead.
+26/11/08 15:59:18 WARN MemoryStore: Not enough space to cache rdd_5713_4 in memory! (computed 5.5 MiB so far)
+26/11/08 15:59:18 WARN BlockManager: Persisting block rdd_5713_4 to disk instead.
+26/11/08 15:59:18 WARN MemoryStore: Not enough space to cache rdd_5713_3 in memory! (computed 13.0 MiB so far)
+26/11/08 15:59:18 WARN BlockManager: Persisting block rdd_5713_3 to disk instead.
+26/11/08 15:59:46 WARN MemoryStore: Not enough space to cache rdd_5713_1 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:46 WARN MemoryStore: Not enough space to cache rdd_5713_9 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5713_11 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5713_10 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5713_4 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_2 in memory! (computed 5.5 MiB so far)
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_2 to disk instead.
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_9 in memory! (computed 2.4 MiB so far)
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_9 to disk instead.
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_5 in memory! (computed 5.5 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5713_0 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_1 in memory! (computed 5.5 MiB so far)
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_5 to disk instead.
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_1 to disk instead.
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_11 in memory! (computed 1663.5 KiB so far)
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_4 to disk instead.
+26/11/08 15:59:47 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5748_0 in memory.
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_10 to disk instead.
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_11 to disk instead.
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_3 in memory! (computed 8.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_0 in memory! (computed 504.0 B so far)
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_3 to disk instead.
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_0 to disk instead.
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5713_7 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5748_7 in memory.
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_7 in memory! (computed 504.0 B so far)
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_7 to disk instead.
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5713_6 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5713_8 in memory! (computed 29.2 MiB so far)
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_8 in memory! (computed 13.0 MiB so far)
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_8 to disk instead.
+26/11/08 15:59:47 WARN MemoryStore: Not enough space to cache rdd_5748_6 in memory! (computed 13.0 MiB so far)
+26/11/08 15:59:47 WARN BlockManager: Persisting block rdd_5748_6 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_8 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_4 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_6 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_8 in memory! (computed 1663.5 KiB so far)
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_4 to disk instead.
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_8 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_2 in memory! (computed 5.5 MiB so far)
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_2 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_1 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5782_1 in memory.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_1 in memory! (computed 504.0 B so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_0 in memory! (computed 19.5 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5782_0 in memory.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_0 in memory! (computed 504.0 B so far)
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_0 to disk instead.
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_1 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_9 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_5 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5782_5 in memory.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_5 in memory! (computed 504.0 B so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_6 in memory! (computed 3.7 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_3 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_6 to disk instead.
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_5 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5782_3 in memory.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_9 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5748_10 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_3 in memory! (computed 504.0 B so far)
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_9 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5782_10 in memory.
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_3 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_10 in memory! (computed 504.0 B so far)
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_10 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_7 in memory! (computed 13.0 MiB so far)
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_7 to disk instead.
+26/11/08 16:00:09 WARN MemoryStore: Not enough space to cache rdd_5782_11 in memory! (computed 8.2 MiB so far)
+26/11/08 16:00:09 WARN BlockManager: Persisting block rdd_5782_11 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_9 in memory! (computed 19.5 MiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_8 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_5 in memory! (computed 3.7 MiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_5 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_4 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_8 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_2 in memory! (computed 3.7 MiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_2 to disk instead.
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_8 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_6 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5816_6 in memory.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_6 in memory! (computed 504.0 B so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_6 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_9 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_7 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5816_7 in memory.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_7 in memory! (computed 504.0 B so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_9 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_11 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_7 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_4 in memory! (computed 1663.5 KiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_4 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_0 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_3 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_11 in memory! (computed 5.5 MiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_11 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_3 in memory! (computed 1663.5 KiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_3 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_0 in memory! (computed 2.4 MiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_0 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5782_1 in memory! (computed 43.9 MiB so far)
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_1 in memory! (computed 2.4 MiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_1 to disk instead.
+26/11/08 16:00:29 WARN MemoryStore: Not enough space to cache rdd_5816_10 in memory! (computed 13.0 MiB so far)
+26/11/08 16:00:29 WARN BlockManager: Persisting block rdd_5816_10 to disk instead.
+26/11/08 16:00:48 WARN MemoryStore: Not enough space to cache rdd_5816_1 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:48 WARN MemoryStore: Not enough space to cache rdd_5816_0 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:48 WARN MemoryStore: Not enough space to cache rdd_5816_6 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:48 WARN MemoryStore: Not enough space to cache rdd_5816_10 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:48 WARN MemoryStore: Not enough space to cache rdd_5816_7 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:48 WARN MemoryStore: Not enough space to cache rdd_5816_4 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:48 WARN MemoryStore: Not enough space to cache rdd_5816_9 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5816_8 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_9 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5816_11 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_1 in memory! (computed 3.7 MiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_10 to disk instead.
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5853_2 in memory! (computed 1024.7 KiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_4 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5816_5 in memory! (computed 29.2 MiB so far)
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_6 to disk instead.
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_4 to disk instead.
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5853_2 to disk instead.
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_1 to disk instead.
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_9 to disk instead.
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_0 in memory! (computed 8.2 MiB so far)
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_0 to disk instead.
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_3 in memory! (computed 3.7 MiB so far)
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_11 in memory! (computed 2.4 MiB so far)
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_11 to disk instead.
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_5 in memory! (computed 1663.5 KiB so far)
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_3 to disk instead.
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_7 in memory! (computed 8.2 MiB so far)
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_7 to disk instead.
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_5 to disk instead.
+26/11/08 16:00:49 WARN MemoryStore: Not enough space to cache rdd_5850_8 in memory! (computed 2.4 MiB so far)
+26/11/08 16:00:49 WARN BlockManager: Persisting block rdd_5850_8 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_1 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_9 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_2 in memory! (computed 13.0 MiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_2 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_11 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_5 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_3 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_10 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_1 in memory! (computed 2.4 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_4 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5884_4 in memory.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_4 in memory! (computed 504.0 B so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_4 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_9 in memory! (computed 3.7 MiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_9 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_3 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_3 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_1 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_0 in memory! (computed 3.7 MiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_0 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_8 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5884_8 in memory.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_8 in memory! (computed 504.0 B so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_11 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_11 to disk instead.
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_5 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_6 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_8 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5850_7 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_10 to disk instead.
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_2 in memory! (computed 2.4 MiB so far)
+26/11/08 16:01:13 WARN MemoryStore: Not enough space to cache rdd_5884_6 in memory! (computed 19.5 MiB so far)
+26/11/08 16:01:13 WARN BlockManager: Persisting block rdd_5884_6 to disk instead.
+26/11/08 16:01:14 WARN MemoryStore: Not enough space to cache rdd_5887_2 in memory! (computed 1024.7 KiB so far)
+26/11/08 16:01:14 WARN BlockManager: Persisting block rdd_5887_2 to disk instead.
+26/11/08 16:01:14 WARN MemoryStore: Not enough space to cache rdd_5884_7 in memory! (computed 19.5 MiB so far)
+26/11/08 16:01:14 WARN BlockManager: Persisting block rdd_5884_7 to disk instead.
+26/11/08 16:01:36 WARN MemoryStore: Not enough space to cache rdd_5884_5 in memory! (computed 29.2 MiB so far)
+26/11/08 16:01:36 WARN MemoryStore: Not enough space to cache rdd_5884_3 in memory! (computed 19.5 MiB so far)
+26/11/08 16:01:36 WARN MemoryStore: Not enough space to cache rdd_5884_11 in memory! (computed 19.5 MiB so far)
+26/11/08 16:01:36 WARN MemoryStore: Not enough space to cache rdd_5884_4 in memory! (computed 19.5 MiB so far)
+26/11/08 16:01:36 WARN MemoryStore: Not enough space to cache rdd_5884_0 in memory! (computed 19.5 MiB so far)
+26/11/08 16:01:36 WARN MemoryStore: Not enough space to cache rdd_5884_6 in memory! (computed 19.5 MiB so far)
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5884_9 in memory! (computed 19.5 MiB so far)
+26/11/08 16:01:37 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5918_9 in memory.
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5918_9 in memory! (computed 504.0 B so far)
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5918_5 in memory! (computed 5.5 MiB so far)
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5918_9 to disk instead.
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5918_5 to disk instead.
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5921_2 in memory! (computed 10.8 MiB so far)
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5918_4 in memory! (computed 2.4 MiB so far)
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5918_4 to disk instead.
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5918_7 in memory! (computed 2.4 MiB so far)
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5918_7 to disk instead.
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5918_0 in memory! (computed 2.4 MiB so far)
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5921_2 to disk instead.
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5918_11 in memory! (computed 2.4 MiB so far)
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5918_6 in memory! (computed 3.7 MiB so far)
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5918_3 in memory! (computed 8.2 MiB so far)
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5918_3 to disk instead.
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5918_0 to disk instead.
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5918_6 to disk instead.
+26/11/08 16:01:37 WARN BlockManager: Persisting block rdd_5918_11 to disk instead.
+26/11/08 16:01:37 WARN MemoryStore: Not enough space to cache rdd_5884_1 in memory! (computed 43.9 MiB so far)
+26/11/08 16:01:38 WARN MemoryStore: Not enough space to cache rdd_5918_1 in memory! (computed 5.5 MiB so far)
+26/11/08 16:01:38 WARN BlockManager: Persisting block rdd_5918_1 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_8 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_5 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_10 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5952_10 in memory.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_10 in memory! (computed 504.0 B so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_10 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_9 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5952_9 in memory.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_5 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_8 in memory! (computed 1663.5 KiB so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_8 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_4 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_9 in memory! (computed 504.0 B so far)
+26/11/08 16:02:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5952_4 in memory.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_4 in memory! (computed 504.0 B so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_9 to disk instead.
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_4 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_7 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_2 in memory! (computed 13.0 MiB so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_2 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_6 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_0 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5952_0 in memory.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_7 in memory! (computed 1663.5 KiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_0 in memory! (computed 504.0 B so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_7 to disk instead.
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_0 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_11 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_6 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5952_11 in memory.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_11 in memory! (computed 504.0 B so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_11 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_1 in memory! (computed 43.9 MiB so far)
+26/11/08 16:02:11 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5952_1 in memory.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5952_1 in memory! (computed 504.0 B so far)
+26/11/08 16:02:11 WARN BlockManager: Persisting block rdd_5952_1 to disk instead.
+26/11/08 16:02:11 WARN MemoryStore: Not enough space to cache rdd_5918_3 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:12 WARN MemoryStore: Not enough space to cache rdd_5952_3 in memory! (computed 13.0 MiB so far)
+26/11/08 16:02:12 WARN BlockManager: Persisting block rdd_5952_3 to disk instead.
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_6 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_1 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_3 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_7 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_10 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_2 in memory! (computed 8.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_5 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_2 to disk instead.
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_9 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_6 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_11 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_1 in memory! (computed 1663.5 KiB so far)
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_1 to disk instead.
+26/11/08 16:02:33 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5986_9 in memory.
+26/11/08 16:02:33 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_5986_11 in memory.
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_6 to disk instead.
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_9 in memory! (computed 504.0 B so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_7 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_11 in memory! (computed 504.0 B so far)
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_9 to disk instead.
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_7 to disk instead.
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_11 to disk instead.
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_10 to disk instead.
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5952_4 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_5 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_5 to disk instead.
+26/11/08 16:02:33 WARN MemoryStore: Not enough space to cache rdd_5986_3 in memory! (computed 2.4 MiB so far)
+26/11/08 16:02:33 WARN BlockManager: Persisting block rdd_5986_3 to disk instead.
+26/11/08 16:02:34 WARN MemoryStore: Not enough space to cache rdd_5986_4 in memory! (computed 3.7 MiB so far)
+26/11/08 16:02:34 WARN BlockManager: Persisting block rdd_5986_4 to disk instead.
+26/11/08 16:02:34 WARN MemoryStore: Not enough space to cache rdd_5952_0 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:34 WARN MemoryStore: Not enough space to cache rdd_5986_0 in memory! (computed 5.5 MiB so far)
+26/11/08 16:02:34 WARN BlockManager: Persisting block rdd_5986_0 to disk instead.
+26/11/08 16:02:34 WARN MemoryStore: Not enough space to cache rdd_5986_8 in memory! (computed 13.0 MiB so far)
+26/11/08 16:02:34 WARN BlockManager: Persisting block rdd_5986_8 to disk instead.
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_11 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_9 in memory! (computed 19.5 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_7 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_2 in memory! (computed 13.0 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_4 in memory! (computed 19.5 MiB so far)
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_2 to disk instead.
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_1 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_10 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_3 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_9 in memory! (computed 2.4 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_5 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_9 to disk instead.
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_4 in memory! (computed 2.4 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_0 in memory! (computed 3.7 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_1 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_10 in memory! (computed 1035.5 KiB so far)
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_1 to disk instead.
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_7 in memory! (computed 2.4 MiB so far)
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_0 to disk instead.
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_7 to disk instead.
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_4 to disk instead.
+26/11/08 16:02:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_6020_5 in memory.
+26/11/08 16:02:55 WARN MemoryStore: Failed to reserve initial memory threshold of 1024.0 KiB for computing block rdd_6020_3 in memory.
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_10 to disk instead.
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_5 in memory! (computed 504.0 B so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_3 in memory! (computed 504.0 B so far)
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_5 to disk instead.
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_6020_11 in memory! (computed 5.5 MiB so far)
+26/11/08 16:02:55 WARN MemoryStore: Not enough space to cache rdd_5986_6 in memory! (computed 29.2 MiB so far)
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_3 to disk instead.
+26/11/08 16:02:55 WARN BlockManager: Persisting block rdd_6020_11 to disk instead.
+26/11/08 16:02:56 WARN MemoryStore: Not enough space to cache rdd_6020_8 in memory! (computed 19.5 MiB so far)
+26/11/08 16:02:56 WARN BlockManager: Persisting block rdd_6020_8 to disk instead.
+26/11/08 16:02:56 WARN MemoryStore: Not enough space to cache rdd_6020_6 in memory! (computed 19.5 MiB so far)
+26/11/08 16:02:56 WARN BlockManager: Persisting block rdd_6020_6 to disk instead.
+26/11/08 16:02:56 WARN MemoryStore: Not enough space to cache rdd_6020_2 in memory! (computed 8.2 MiB so far)
+26/11/08 16:02:56 WARN MemoryStore: Not enough space to cache rdd_6023_2 in memory! (computed 2.7 MiB so far)
+26/11/08 16:02:56 WARN BlockManager: Persisting block rdd_6023_2 to disk instead.
+26/11/08 16:03:12 WARN DAGScheduler: Broadcasting large task binary with size 1021.6 KiB
+Final fit: 1170s
+
+VALIDATION, April 2013 (2150997 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   33.82     87.78     54.9     14.2    0.2986   0.758
+hotel average               36.44     89.56     86.1     15.5    0.3236   0.716
+destination average         60.17    119.34     96.5     30.1    0.5071   0.303
+overall median              72.22    135.36     95.5     37.0    0.6128  -0.018
+
+TEST, May-June 2013 (4790852 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   38.74     93.25     57.1     16.8    0.3390   0.676
+hotel average               40.35     93.90     61.9     17.6    0.3535   0.648
+destination average         60.56    120.11     74.9     30.1    0.5110   0.264
+overall median              70.79    134.33     84.2     35.7    0.6025  -0.023
+
+TEST, new hotel (55928 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   58.78    148.28     86.8     32.0    0.5580   0.336
+hotel average               64.36    151.26    101.6     36.9    0.6082   0.211
+destination average         64.36    151.26    101.6     36.9    0.6082   0.211
+overall median              71.80    159.38    111.9     42.2    0.6911  -0.019
+
+TEST, seen in training (4734924 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   38.50     92.40     56.8     16.7    0.3356   0.681
+hotel average               40.06     93.01     61.5     17.5    0.3493   0.654
+destination average         60.51    119.69     74.6     30.1    0.5097   0.264
+overall median              70.78    134.00     83.9     35.6    0.6014  -0.025
+
+TEST, lead time 1) 0-1 days (602328 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   32.48     91.83     37.7     14.9    0.3305   0.662
+hotel average               33.63     91.58     47.9     15.6    0.3394   0.644
+destination average         51.62    110.46     67.7     29.4    0.4948   0.242
+overall median              59.07    119.58     82.6     33.9    0.5701  -0.006
+
+TEST, lead time 2) 2-7 days (1015002 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   35.73     89.68     46.7     15.8    0.3366   0.665
+hotel average               37.16     89.60     48.8     16.7    0.3487   0.640
+destination average         55.87    112.51     61.7     29.7    0.5024   0.253
+overall median              64.11    123.89     71.6     33.9    0.5819  -0.002
+
+TEST, lead time 3) 8-30 days (1499828 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   38.85     90.69     78.6     17.0    0.3419   0.665
+hotel average               40.16     90.92     71.3     17.9    0.3534   0.642
+destination average         59.88    116.88     81.1     30.0    0.5085   0.258
+overall median              69.67    130.61     98.7     35.2    0.5969  -0.022
+
+TEST, lead time 4) 31-90 days (1242032 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   41.87     96.94     50.4     18.0    0.3454   0.657
+hotel average               44.01     98.85     54.0     19.1    0.3645   0.619
+destination average         64.67    126.99     65.8     30.3    0.5185   0.228
+overall median              76.01    141.93     70.7     36.0    0.6129  -0.079
+
+TEST, lead time 5) 91+ days (431662 rows)
+model                       MAE $    RMSE $   MAPE %  MdAPE %  log RMSE  log R2
+GBT model                   45.11    101.05     53.3     17.8    0.3277   0.737
+hotel average               47.31    102.20    102.4     18.3    0.3521   0.696
+destination average         74.55    139.49    120.7     32.2    0.5392   0.287
+overall median              91.72    164.28    104.4     39.9    0.6787  -0.130
+
+Feature importance:
+  hotel_mean                  0.5874
+  lead_time_days              0.0456
+  log_hotel_rows              0.0438
+  destination_mean            0.0435
+  country_mean                0.0368
+  checkin_month               0.0366
+  site_id                     0.0342
+  location_score1             0.0286
+  day_of_week                 0.0227
+  adults                      0.0227
+  nights                      0.0180
+  children                    0.0162
+  is_brand_num                0.0123
+  star_rating_filled          0.0111
+  log_historical_price_filled 0.0079
+
+Total: 1619s
+Finished

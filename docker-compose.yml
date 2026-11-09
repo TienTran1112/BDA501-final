@@ -1,0 +1,142 @@
+name: bda501-booking
+
+# Serving layer. For a heavy Spark job start one database at a time, because Docker has only 7.6 GB here:
+#   docker compose --profile cassandra up -d     (3 nodes, RF=3)
+#   docker compose --profile mongo up -d         (3-member replica set)
+# Both databases and the dashboard fit together when no Spark job is running.
+# No database port is published: they are reachable only from the Spark and dashboard containers on this Compose network.
+x-cassandra: &cassandra
+  image: cassandra:5.0.9
+  profiles: [cassandra]
+  entrypoint:
+    - bash
+    - -c
+    # A smaller commit log cap keeps disk use down on this machine. Spelled so that a restart changes nothing.
+    - sed -i 's/^# *commitlog_total_space:.*/commitlog_total_space:\ 1024MiB/' /etc/cassandra/cassandra.yaml; exec docker-entrypoint.sh cassandra -f
+  environment: &cassandra-env
+    CASSANDRA_CLUSTER_NAME: bda501
+    CASSANDRA_SEEDS: cassandra1
+    CASSANDRA_DC: dc1
+    CASSANDRA_RACK: rack1
+    CASSANDRA_ENDPOINT_SNITCH: GossipingPropertyFileSnitch
+    MAX_HEAP_SIZE: 1024M
+    HEAP_NEWSIZE: 256M
+  healthcheck:
+    test: ["CMD-SHELL", "cqlsh -e 'describe keyspaces' > /dev/null 2>&1"]
+    interval: 15s
+    timeout: 20s
+    retries: 40
+    start_period: 60s
+  # 1600m is for bulk loading, when Spark needs the rest of the 7.6 GB. For read tests raise it to leave room for file cache:
+  #   docker update --memory 2000m --memory-swap 4000m bda501-booking-cassandra1   (and 2, 3)
+  # At 1600m the file cache held only about 17 MB and Q1 p95 at one client was 52.9 ms; at 2000m it was 6.9 ms.
+  mem_limit: 1600m
+
+x-mongo: &mongo
+  image: mongo:8.0
+  profiles: [mongo]
+  command: ["mongod", "--replSet", "rs0", "--bind_ip_all", "--wiredTigerCacheSizeGB", "0.25"]
+  healthcheck:
+    test: ["CMD-SHELL", "mongosh --quiet --eval 'db.runCommand({ping:1}).ok' | grep -q 1"]
+    interval: 10s
+    timeout: 10s
+    retries: 30
+    start_period: 15s
+  mem_limit: 700m
+
+services:
+  cassandra1:
+    <<: *cassandra
+    container_name: bda501-booking-cassandra1
+    hostname: cassandra1
+    volumes: [cassandra1_data:/var/lib/cassandra]
+    networks: {default: {ipv4_address: 172.22.0.3}}
+
+  cassandra2:
+    <<: *cassandra
+    container_name: bda501-booking-cassandra2
+    hostname: cassandra2
+    volumes: [cassandra2_data:/var/lib/cassandra]
+    networks: {default: {ipv4_address: 172.22.0.9}}
+    depends_on:
+      cassandra1: {condition: service_healthy}
+
+  cassandra3:
+    <<: *cassandra
+    container_name: bda501-booking-cassandra3
+    hostname: cassandra3
+    volumes: [cassandra3_data:/var/lib/cassandra]
+    networks: {default: {ipv4_address: 172.22.0.8}}
+    depends_on:
+      cassandra2: {condition: service_healthy}
+
+  mongo1:
+    <<: *mongo
+    container_name: bda501-booking-mongo1
+    hostname: mongo1
+    volumes: [mongo1_data:/data/db]
+
+  mongo2:
+    <<: *mongo
+    container_name: bda501-booking-mongo2
+    hostname: mongo2
+    volumes: [mongo2_data:/data/db]
+
+  mongo3:
+    <<: *mongo
+    container_name: bda501-booking-mongo3
+    hostname: mongo3
+    volumes: [mongo3_data:/data/db]
+
+  spark:
+    build: ./docker/spark
+    image: bda501-booking-spark
+    container_name: bda501-booking-spark
+    environment:
+      SPARK_CONF_DIR: /opt/spark-conf
+    volumes:
+      # ./data includes data/raw, the Expedia CSVs. No Spark job reads them: convert_expedia.py runs on the host.
+      - ./src:/workspace/src
+      - ./data:/workspace/data
+      - ./docker/spark/conf:/opt/spark-conf:ro
+    ports:
+      # Spark UI at http://localhost:4050 (4040-4045 are used by the BDA501 lab containers).
+      - "4050:4040"
+    mem_limit: 7g
+
+  # Dashboard at http://localhost:8550. Reads live from both databases, so start them first:
+  #   docker compose --profile cassandra --profile mongo --profile dashboard up -d
+  dashboard:
+    build: ./docker/dashboard
+    image: bda501-booking-dashboard
+    container_name: bda501-booking-dashboard
+    profiles: [dashboard]
+    volumes:
+      - ./src/dashboard:/app:ro
+    ports:
+      - "127.0.0.1:8550:8501"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://localhost:8501/_stcore/health', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    mem_limit: 600m
+
+# Cassandra records each node's IP in its ring and refuses to start a node on another node's recorded address.
+# So the three nodes have fixed IPs, and every other container gets one from ip_range, which excludes them.
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 172.22.0.0/16
+          ip_range: 172.22.1.0/24
+          gateway: 172.22.0.1
+
+volumes:
+  cassandra1_data:
+  cassandra2_data:
+  cassandra3_data:
+  mongo1_data:
+  mongo2_data:
+  mongo3_data:

@@ -1,0 +1,16 @@
+subset 1x: 1038152 rows
+subset 4x: 4133472 rows
+subset 16x: 16530619 rows
+
+scale_1x run 1: etl 29s, fit 79s, score 5s, spill 0.00 GB, MAE $38.58
+Finished
+scale_4x run 1: etl 63s, fit 123s, score 12s, spill 0.00 GB, MAE $38.78
+Finished
+scale_16x run 1: etl 105s, fit 587s, score 28s, spill 1.60 GB, MAE $38.89
+Finished
+scale_16x run 1: etl 112s, fit 581s, score 28s, spill 1.68 GB, MAE $38.90
+Finished
+scale_4x run 1: etl 51s, fit 107s, score 10s, spill 0.00 GB, MAE $38.74
+Finished
+scale_1x run 1: etl 29s, fit 69s, score 4s, spill 0.00 GB, MAE $38.51
+Finished

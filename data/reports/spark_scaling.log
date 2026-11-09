@@ -1,0 +1,15 @@
+scale_1x run 1: etl 32s, fit 90s, score 6s, spill 0.00 GB, MAE $38.54
+scale_1x run 2: etl 51s, fit 98s, score 11s, spill 0.00 GB, MAE $38.63
+scale_4x run 1: etl 72s, fit 124s, score 29s, spill 0.00 GB, MAE $38.83
+scale_4x run 2: etl 86s, fit 163s, score 19s, spill 0.00 GB, MAE $38.84
+scale_16x run 1: etl 168s, fit 627s, score 31s, spill 1.60 GB, MAE $38.91
+scale_16x run 2: etl 118s, fit 688s, score 34s, spill 1.67 GB, MAE $38.91
+partitions_12 run 1: etl 56s, fit 96s, score 11s, spill 0.00 GB, MAE $39.25
+partitions_12 run 2: etl 51s, fit 95s, score 10s, spill 0.00 GB, MAE $39.24
+partitions_192 run 1: etl 77s, fit 215s, score 12s, spill 0.00 GB, MAE $39.10
+partitions_192 run 2: etl 76s, fit 170s, score 11s, spill 0.00 GB, MAE $39.08
+executors_1 run 1: etl 48s, fit 127s, score 11s, spill 0.00 GB, MAE $38.87
+executors_1 run 2: etl 48s, fit 113s, score 10s, spill 0.00 GB, MAE $38.87
+executors_2 run 1: etl 42s, fit 95s, score 9s, spill 0.00 GB, MAE $38.88
+executors_2 run 2: etl 40s, fit 104s, score 12s, spill 0.00 GB, MAE $38.83
+Finished

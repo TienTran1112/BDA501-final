@@ -1,0 +1,48 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/08 21:25:57 INFO SparkContext: Running Spark version 4.2.0
+26/11/08 21:25:57 INFO SparkContext: OS info Linux, 6.18.54.1-microsoft-standard-WSL2, amd64
+26/11/08 21:25:57 INFO SparkContext: Java version 17.0.21+9-1-deb12u1-Debian
+26/11/08 21:25:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/08 21:25:58 INFO ResourceUtils: ==============================================================
+26/11/08 21:25:58 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/11/08 21:25:58 INFO ResourceUtils: ==============================================================
+26/11/08 21:25:58 INFO SparkContext: Submitted application: bda501-serving-cassandra
+26/11/08 21:25:58 INFO SecurityManager: Changing view acls to: root
+26/11/08 21:25:58 INFO SecurityManager: Changing modify acls to: root
+26/11/08 21:25:58 INFO SecurityManager: Changing view acls groups to: root
+26/11/08 21:25:58 INFO SecurityManager: Changing modify acls groups to: root
+26/11/08 21:25:58 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY; RPC SSL disabled
+26/11/08 21:25:58 INFO Utils: Successfully started service 'sparkDriver' on port 44865.
+26/11/08 21:25:59 INFO SparkEnv: Registering MapOutputTracker
+26/11/08 21:25:59 INFO SparkEnv: Registering BlockManagerMaster
+26/11/08 21:25:59 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/11/08 21:25:59 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/11/08 21:25:59 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/11/08 21:25:59 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-cc32903f-1460-47d5-b82b-97f1a05606ab
+26/11/08 21:25:59 INFO SparkEnv: Registering OutputCommitCoordinator
+26/11/08 21:25:59 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/11/08 21:25:59 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/11/08 21:25:59 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/11/08 21:25:59 INFO ResourceProfile: Limiting resource is cpu
+26/11/08 21:25:59 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/11/08 21:25:59 INFO SecurityManager: Changing view acls to: root
+26/11/08 21:25:59 INFO SecurityManager: Changing modify acls to: root
+26/11/08 21:25:59 INFO SecurityManager: Changing view acls groups to: root
+26/11/08 21:25:59 INFO SecurityManager: Changing modify acls groups to: root
+26/11/08 21:25:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY; RPC SSL disabled
+26/11/08 21:26:00 INFO Executor: Starting executor ID driver on host 3c27afe84911
+26/11/08 21:26:00 INFO Executor: Running Spark version 4.2.0
+26/11/08 21:26:00 INFO Executor: OS info Linux, 6.18.54.1-microsoft-standard-WSL2, amd64
+26/11/08 21:26:00 INFO Executor: Java version 17.0.21+9-1-deb12u1-Debian
+26/11/08 21:26:00 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/11/08 21:26:00 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@4ae10b5c for default.
+26/11/08 21:26:00 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36011.
+26/11/08 21:26:00 INFO NettyBlockTransferService: Server created on 3c27afe84911:36011
+26/11/08 21:26:00 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/11/08 21:26:00 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 3c27afe84911, 36011, None)
+26/11/08 21:26:00 INFO BlockManagerMasterEndpoint: Registering block manager 3c27afe84911:36011 with 720.0 MiB RAM, BlockManagerId(driver, 3c27afe84911, 36011, None)
+26/11/08 21:26:00 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 3c27afe84911, 36011, None)
+26/11/08 21:26:00 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 3c27afe84911, 36011, None)
+price_history: 16530619 rows in 4785s (3455 rows/s)
+cheapest_by_city: 16064292 rows in 4393s (3657 rows/s)

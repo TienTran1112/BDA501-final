@@ -1,0 +1,49 @@
+{
+  "settings": {
+    "fraction": 1.0,
+    "warmup_s": 10,
+    "measure_s": 45,
+    "key_count": 20000
+  },
+  "Q2": [
+    {
+      "clients": 1,
+      "requests": 10806,
+      "throughput_per_s": 240.1,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.15,
+      "first_error": null,
+      "p50_ms": 3.97,
+      "p95_ms": 5.91,
+      "p99_ms": 7.75
+    },
+    {
+      "clients": 4,
+      "requests": 29712,
+      "throughput_per_s": 660.3,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.16,
+      "first_error": null,
+      "p50_ms": 5.45,
+      "p95_ms": 9.56,
+      "p99_ms": 14.49
+    },
+    {
+      "clients": 16,
+      "requests": 62967,
+      "throughput_per_s": 1399.3,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.17,
+      "first_error": null,
+      "p50_ms": 10.34,
+      "p95_ms": 19.81,
+      "p99_ms": 29.16
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Q1  1 clients:    209.6/s  p50 4.5 ms  p95 6.88 ms  p99 9.38 ms  rows/request 4.15  errors 0  empty 0
+Q1  4 clients:    565.8/s  p50 6.26 ms  p95 11.1 ms  p99 17.78 ms  rows/request 4.18  errors 0  empty 0
+Q1 16 clients:   1132.0/s  p50 12.76 ms  p95 24.99 ms  p99 35.76 ms  rows/request 4.17  errors 0  empty 0
+Finished

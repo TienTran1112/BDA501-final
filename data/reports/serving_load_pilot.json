@@ -1,0 +1,12 @@
+{
+  "price_history": {
+    "rows": 1038152,
+    "seconds": 353,
+    "rows_per_s": 2942
+  },
+  "cheapest_by_city": {
+    "rows": 1036341,
+    "seconds": 323,
+    "rows_per_s": 3204
+  }
+}

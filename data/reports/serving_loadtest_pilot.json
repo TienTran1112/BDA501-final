@@ -1,0 +1,90 @@
+{
+  "settings": {
+    "fraction": 0.0625,
+    "warmup_s": 10,
+    "measure_s": 45,
+    "key_count": 20000
+  },
+  "Q1": [
+    {
+      "clients": 1,
+      "requests": 13202,
+      "throughput_per_s": 293.4,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 1.19,
+      "first_error": null,
+      "p50_ms": 3.19,
+      "p95_ms": 5.1,
+      "p99_ms": 7.2
+    },
+    {
+      "clients": 4,
+      "requests": 44232,
+      "throughput_per_s": 982.9,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 1.19,
+      "first_error": null,
+      "p50_ms": 3.84,
+      "p95_ms": 5.56,
+      "p99_ms": 7.95
+    },
+    {
+      "clients": 16,
+      "requests": 83642,
+      "throughput_per_s": 1858.7,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 1.2,
+      "first_error": null,
+      "p50_ms": 7.77,
+      "p95_ms": 14.9,
+      "p99_ms": 21.92
+    }
+  ],
+  "Q2": [
+    {
+      "clients": 1,
+      "requests": 15197,
+      "throughput_per_s": 337.7,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.15,
+      "first_error": null,
+      "p50_ms": 2.64,
+      "p95_ms": 4.55,
+      "p99_ms": 7.51
+    },
+    {
+      "clients": 4,
+      "requests": 41060,
+      "throughput_per_s": 912.4,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.14,
+      "first_error": null,
+      "p50_ms": 4.0,
+      "p95_ms": 6.73,
+      "p99_ms": 10.81
+    },
+    {
+      "clients": 16,
+      "requests": 81542,
+      "throughput_per_s": 1812.0,
+      "errors": 0,
+      "empty": 0,
+      "empty_share": 0.0,
+      "rows_per_request": 19.14,
+      "first_error": null,
+      "p50_ms": 8.09,
+      "p95_ms": 15.01,
+      "p99_ms": 20.97
+    }
+  ]
+}

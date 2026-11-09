@@ -1,0 +1,133 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+:: loading settings :: url = jar:file:/usr/local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2.5.2/cache
+The jars for the packages stored in: /root/.ivy2.5.2/jars
+org.mongodb.spark#mongo-spark-connector_2.13 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-2ad67f56-6ead-4b34-b98a-7660c6a2e88d;1.0
+	confs: [default]
+	found org.mongodb.spark#mongo-spark-connector_2.13;11.1.0 in central
+	found org.mongodb#mongodb-driver-sync;5.1.4 in central
+	[5.1.4] org.mongodb#mongodb-driver-sync;[5.1.1,5.1.99)
+	found org.mongodb#bson;5.1.4 in central
+	found org.mongodb#mongodb-driver-core;5.1.4 in central
+	found org.mongodb#bson-record-codec;5.1.4 in central
+downloading https://repo1.maven.org/maven2/org/mongodb/spark/mongo-spark-connector_2.13/11.1.0/mongo-spark-connector_2.13-11.1.0.jar ...
+	[SUCCESSFUL ] org.mongodb.spark#mongo-spark-connector_2.13;11.1.0!mongo-spark-connector_2.13.jar (236ms)
+downloading https://repo1.maven.org/maven2/org/mongodb/mongodb-driver-sync/5.1.4/mongodb-driver-sync-5.1.4.jar ...
+	[SUCCESSFUL ] org.mongodb#mongodb-driver-sync;5.1.4!mongodb-driver-sync.jar (139ms)
+downloading https://repo1.maven.org/maven2/org/mongodb/bson/5.1.4/bson-5.1.4.jar ...
+	[SUCCESSFUL ] org.mongodb#bson;5.1.4!bson.jar (203ms)
+downloading https://repo1.maven.org/maven2/org/mongodb/mongodb-driver-core/5.1.4/mongodb-driver-core-5.1.4.jar ...
+	[SUCCESSFUL ] org.mongodb#mongodb-driver-core;5.1.4!mongodb-driver-core.jar (255ms)
+downloading https://repo1.maven.org/maven2/org/mongodb/bson-record-codec/5.1.4/bson-record-codec-5.1.4.jar ...
+	[SUCCESSFUL ] org.mongodb#bson-record-codec;5.1.4!bson-record-codec.jar (120ms)
+:: resolution report :: resolve 4765ms :: artifacts dl 973ms
+	:: modules in use:
+	org.mongodb#bson;5.1.4 from central in [default]
+	org.mongodb#bson-record-codec;5.1.4 from central in [default]
+	org.mongodb#mongodb-driver-core;5.1.4 from central in [default]
+	org.mongodb#mongodb-driver-sync;5.1.4 from central in [default]
+	org.mongodb.spark#mongo-spark-connector_2.13;11.1.0 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   5   |   5   |   5   |   0   ||   5   |   5   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-2ad67f56-6ead-4b34-b98a-7660c6a2e88d
+	confs: [default]
+	5 artifacts copied, 0 already retrieved (2543kB/18ms)
+26/11/09 00:21:32 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/09 00:21:35 INFO SparkContext: Running Spark version 4.2.0
+26/11/09 00:21:35 INFO SparkContext: OS info Linux, 6.18.54.1-microsoft-standard-WSL2, amd64
+26/11/09 00:21:35 INFO SparkContext: Java version 17.0.21+9-1-deb12u1-Debian
+26/11/09 00:21:35 INFO ResourceUtils: ==============================================================
+26/11/09 00:21:35 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/11/09 00:21:35 INFO ResourceUtils: ==============================================================
+26/11/09 00:21:35 INFO SparkContext: Submitted application: bda501-serving-mongo
+26/11/09 00:21:35 INFO SecurityManager: Changing view acls to: root
+26/11/09 00:21:35 INFO SecurityManager: Changing modify acls to: root
+26/11/09 00:21:35 INFO SecurityManager: Changing view acls groups to: root
+26/11/09 00:21:35 INFO SecurityManager: Changing modify acls groups to: root
+26/11/09 00:21:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY; RPC SSL disabled
+26/11/09 00:21:36 INFO Utils: Successfully started service 'sparkDriver' on port 36127.
+26/11/09 00:21:36 INFO SparkEnv: Registering MapOutputTracker
+26/11/09 00:21:36 INFO SparkEnv: Registering BlockManagerMaster
+26/11/09 00:21:36 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/11/09 00:21:36 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/11/09 00:21:36 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/11/09 00:21:36 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-4cb74263-8565-4c04-81b5-d670ff4b7f66
+26/11/09 00:21:36 INFO SparkEnv: Registering OutputCommitCoordinator
+26/11/09 00:21:37 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/11/09 00:21:37 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/11/09 00:21:37 INFO SparkContext: Added JAR file:///root/.ivy2.5.2/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar at spark://3c27afe84911:36127/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO SparkContext: Added JAR file:///root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar at spark://3c27afe84911:36127/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO SparkContext: Added JAR file:///root/.ivy2.5.2/jars/org.mongodb_bson-5.1.4.jar at spark://3c27afe84911:36127/jars/org.mongodb_bson-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO SparkContext: Added JAR file:///root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-core-5.1.4.jar at spark://3c27afe84911:36127/jars/org.mongodb_mongodb-driver-core-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO SparkContext: Added JAR file:///root/.ivy2.5.2/jars/org.mongodb_bson-record-codec-5.1.4.jar at spark://3c27afe84911:36127/jars/org.mongodb_bson-record-codec-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO SparkContext: Added file file:///root/.ivy2.5.2/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar at file:///root/.ivy2.5.2/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO Utils: Copying /root/.ivy2.5.2/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar
+26/11/09 00:21:37 INFO SparkContext: Added file file:///root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar at file:///root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO Utils: Copying /root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_mongodb-driver-sync-5.1.4.jar
+26/11/09 00:21:37 INFO SparkContext: Added file file:///root/.ivy2.5.2/jars/org.mongodb_bson-5.1.4.jar at file:///root/.ivy2.5.2/jars/org.mongodb_bson-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO Utils: Copying /root/.ivy2.5.2/jars/org.mongodb_bson-5.1.4.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_bson-5.1.4.jar
+26/11/09 00:21:37 INFO SparkContext: Added file file:///root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-core-5.1.4.jar at file:///root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-core-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO Utils: Copying /root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-core-5.1.4.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_mongodb-driver-core-5.1.4.jar
+26/11/09 00:21:37 INFO SparkContext: Added file file:///root/.ivy2.5.2/jars/org.mongodb_bson-record-codec-5.1.4.jar at file:///root/.ivy2.5.2/jars/org.mongodb_bson-record-codec-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:37 INFO Utils: Copying /root/.ivy2.5.2/jars/org.mongodb_bson-record-codec-5.1.4.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_bson-record-codec-5.1.4.jar
+26/11/09 00:21:38 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/11/09 00:21:38 INFO ResourceProfile: Limiting resource is cpu
+26/11/09 00:21:38 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/11/09 00:21:38 INFO SecurityManager: Changing view acls to: root
+26/11/09 00:21:38 INFO SecurityManager: Changing modify acls to: root
+26/11/09 00:21:38 INFO SecurityManager: Changing view acls groups to: root
+26/11/09 00:21:38 INFO SecurityManager: Changing modify acls groups to: root
+26/11/09 00:21:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY; RPC SSL disabled
+26/11/09 00:21:38 INFO Executor: Starting executor ID driver on host 3c27afe84911
+26/11/09 00:21:38 INFO Executor: Running Spark version 4.2.0
+26/11/09 00:21:38 INFO Executor: OS info Linux, 6.18.54.1-microsoft-standard-WSL2, amd64
+26/11/09 00:21:38 INFO Executor: Java version 17.0.21+9-1-deb12u1-Debian
+26/11/09 00:21:38 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/11/09 00:21:38 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@173249a9 for default.
+26/11/09 00:21:38 INFO Executor: Fetching file:///root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:38 INFO Utils: /root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_mongodb-driver-sync-5.1.4.jar
+26/11/09 00:21:38 INFO Executor: Fetching file:///root/.ivy2.5.2/jars/org.mongodb_bson-record-codec-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:38 INFO Utils: /root/.ivy2.5.2/jars/org.mongodb_bson-record-codec-5.1.4.jar has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_bson-record-codec-5.1.4.jar
+26/11/09 00:21:38 INFO Executor: Fetching file:///root/.ivy2.5.2/jars/org.mongodb_bson-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:38 INFO Utils: /root/.ivy2.5.2/jars/org.mongodb_bson-5.1.4.jar has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_bson-5.1.4.jar
+26/11/09 00:21:38 INFO Executor: Fetching file:///root/.ivy2.5.2/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar with timestamp 1794183695568
+26/11/09 00:21:38 INFO Utils: /root/.ivy2.5.2/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar
+26/11/09 00:21:38 INFO Executor: Fetching file:///root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-core-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:38 INFO Utils: /root/.ivy2.5.2/jars/org.mongodb_mongodb-driver-core-5.1.4.jar has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_mongodb-driver-core-5.1.4.jar
+26/11/09 00:21:38 INFO Executor: Fetching spark://3c27afe84911:36127/jars/org.mongodb_bson-record-codec-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:38 INFO TransportClientFactory: Successfully created connection to 3c27afe84911/172.22.0.3:36127 after 125 ms (0 ms spent in bootstraps)
+26/11/09 00:21:38 INFO Utils: Fetching spark://3c27afe84911:36127/jars/org.mongodb_bson-record-codec-5.1.4.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp18170431685616958935.tmp
+26/11/09 00:21:38 INFO Utils: /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp18170431685616958935.tmp has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_bson-record-codec-5.1.4.jar
+26/11/09 00:21:39 INFO Executor: Adding file:/tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_bson-record-codec-5.1.4.jar to class loader default
+26/11/09 00:21:39 INFO Executor: Fetching spark://3c27afe84911:36127/jars/org.mongodb_bson-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:39 INFO Utils: Fetching spark://3c27afe84911:36127/jars/org.mongodb_bson-5.1.4.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp7938510772767856497.tmp
+26/11/09 00:21:39 INFO Utils: /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp7938510772767856497.tmp has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_bson-5.1.4.jar
+26/11/09 00:21:39 INFO Executor: Adding file:/tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_bson-5.1.4.jar to class loader default
+26/11/09 00:21:39 INFO Executor: Fetching spark://3c27afe84911:36127/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar with timestamp 1794183695568
+26/11/09 00:21:39 INFO Utils: Fetching spark://3c27afe84911:36127/jars/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp13769214637088318431.tmp
+26/11/09 00:21:39 INFO Utils: /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp13769214637088318431.tmp has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar
+26/11/09 00:21:39 INFO Executor: Adding file:/tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb.spark_mongo-spark-connector_2.13-11.1.0.jar to class loader default
+26/11/09 00:21:39 INFO Executor: Fetching spark://3c27afe84911:36127/jars/org.mongodb_mongodb-driver-core-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:39 INFO Utils: Fetching spark://3c27afe84911:36127/jars/org.mongodb_mongodb-driver-core-5.1.4.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp1470562036901826901.tmp
+26/11/09 00:21:39 INFO Utils: /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp1470562036901826901.tmp has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_mongodb-driver-core-5.1.4.jar
+26/11/09 00:21:39 INFO Executor: Adding file:/tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_mongodb-driver-core-5.1.4.jar to class loader default
+26/11/09 00:21:39 INFO Executor: Fetching spark://3c27afe84911:36127/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar with timestamp 1794183695568
+26/11/09 00:21:39 INFO Utils: Fetching spark://3c27afe84911:36127/jars/org.mongodb_mongodb-driver-sync-5.1.4.jar to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp5490846820328611062.tmp
+26/11/09 00:21:39 INFO Utils: /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/fetchFileTemp5490846820328611062.tmp has been previously copied to /tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_mongodb-driver-sync-5.1.4.jar
+26/11/09 00:21:39 INFO Executor: Adding file:/tmp/spark-3010c36d-cf80-4f50-ad23-c9f2bc2dea95/userFiles-414703c4-c7cd-409c-bf5d-58eaf0a1ef72/org.mongodb_mongodb-driver-sync-5.1.4.jar to class loader default
+26/11/09 00:21:39 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45483.
+26/11/09 00:21:39 INFO NettyBlockTransferService: Server created on 3c27afe84911:45483
+26/11/09 00:21:39 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/11/09 00:21:39 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 3c27afe84911, 45483, None)
+26/11/09 00:21:39 INFO BlockManagerMasterEndpoint: Registering block manager 3c27afe84911:45483 with 2.2 GiB RAM, BlockManagerId(driver, 3c27afe84911, 45483, None)
+26/11/09 00:21:39 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 3c27afe84911, 45483, None)
+26/11/09 00:21:39 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 3c27afe84911, 45483, None)
+hotels: 140812 documents in 29s (4864 docs/s)
+destination_weekly: 192476 documents in 24s (7906 docs/s)
+indexes created

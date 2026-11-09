@@ -1,0 +1,10 @@
+{
+  "price_alerts": 200,
+  "destination_catalog": 339,
+  "seconds": 136,
+  "rule": {
+    "ratio": 1.25,
+    "min_rows": 200,
+    "min_trailing_weeks": 3
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "price_history": {
+    "rows": 16530619,
+    "seconds": 4785,
+    "rows_per_s": 3455
+  },
+  "cheapest_by_city": {
+    "rows": 16064292,
+    "seconds": 4393,
+    "rows_per_s": 3657
+  },
+  "hotels": {
+    "rows": 140812,
+    "seconds": 29,
+    "rows_per_s": 4864
+  },
+  "destination_weekly": {
+    "rows": 192476,
+    "seconds": 24,
+    "rows_per_s": 7906
+  }
+}

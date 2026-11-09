@@ -1,0 +1,24 @@
+subset 1x: 1038152 rows
+subset 4x: 4133472 rows
+subset 16x: 16530619 rows
+
+scale_4x run 1: etl 48s, fit 109s, score 10s, spill 0.00 GB, MAE $38.80
+Finished
+executors_2 run 1: etl 42s, fit 97s, score 8s, spill 0.00 GB, MAE $38.83
+Finished
+executors_1 run 1: etl 40s, fit 110s, score 10s, spill 0.00 GB, MAE $38.87
+Finished
+partitions_12 run 1: etl 61s, fit 96s, score 11s, spill 0.00 GB, MAE $39.19
+Finished
+partitions_192 run 1: etl 75s, fit 163s, score 11s, spill 0.00 GB, MAE $38.98
+Finished
+partitions_192 run 1: etl 68s, fit 151s, score 10s, spill 0.00 GB, MAE $39.05
+Finished
+partitions_12 run 1: etl 48s, fit 88s, score 16s, spill 0.00 GB, MAE $39.20
+Finished
+executors_1 run 1: etl 42s, fit 105s, score 9s, spill 0.00 GB, MAE $38.87
+Finished
+executors_2 run 1: etl 43s, fit 90s, score 8s, spill 0.00 GB, MAE $38.83
+Finished
+scale_4x run 1: etl 49s, fit 113s, score 10s, spill 0.00 GB, MAE $38.85
+Finished
